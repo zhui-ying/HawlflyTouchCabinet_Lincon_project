@@ -1,0 +1,698 @@
+Build target 'LED-DEMO'
+compiling main.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_it.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_gpio.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_rcc.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\Libraries\src\stm32f10x_rcc.c(120): warning:  #47-D: incompatible redefinition of macro "HSI_Value" (declared at line 512 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+compiling BSP.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\BSP.c(24): error:  #20: identifier "SystemFrequency" is undefined
+compiling led.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\led.c(27): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\BSP\led.c(28): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+..\BSP\led.c(28): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_5" is undefined
+..\BSP\led.c(31): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+..\BSP\led.c(32): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+..\BSP\led.c(33): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\BSP\led.c(35): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+compiling app.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\APP\app.c(8): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\APP\app.c(8): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\APP\app.c(8): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\APP\app.c(12): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\APP\app.c(16): error:  #20: identifier "GPIO_Pin_5" is undefined
+compiling os_core.c...
+compiling os_flag.c...
+compiling os_mbox.c...
+compiling os_mem.c...
+compiling os_mutex.c...
+compiling os_q.c...
+compiling os_sem.c...
+compiling os_task.c...
+compiling os_time.c...
+compiling os_tmr.c...
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+compiling os_dbg.c...
+Target not created
+Build target 'LED-DEMO'
+compiling main.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_it.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_gpio.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_rcc.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\Libraries\src\stm32f10x_rcc.c(120): warning:  #47-D: incompatible redefinition of macro "HSI_Value" (declared at line 512 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling BSP.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\BSP.c(24): error:  #20: identifier "SystemFrequency" is undefined
+compiling led.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\led.c(27): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\BSP\led.c(28): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+..\BSP\led.c(28): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_5" is undefined
+..\BSP\led.c(31): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+..\BSP\led.c(32): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+..\BSP\led.c(33): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\BSP\led.c(35): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+compiling app.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\APP\app.c(8): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\APP\app.c(8): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\APP\app.c(8): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\APP\app.c(12): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\APP\app.c(16): error:  #20: identifier "GPIO_Pin_5" is undefined
+Target not created
+Build target 'LED-DEMO'
+assembling startup_stm32f10x_hd.s...
+compiling main.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_it.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_gpio.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_rcc.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\Libraries\src\stm32f10x_rcc.c(120): warning:  #47-D: incompatible redefinition of macro "HSI_Value" (declared at line 512 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+compiling BSP.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\BSP.c(24): error:  #20: identifier "SystemFrequency" is undefined
+compiling led.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\led.c(27): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\BSP\led.c(28): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+..\BSP\led.c(28): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_5" is undefined
+..\BSP\led.c(31): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+..\BSP\led.c(32): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+..\BSP\led.c(33): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\BSP\led.c(35): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+compiling app.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\APP\app.c(8): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\APP\app.c(8): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\APP\app.c(8): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\APP\app.c(12): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\APP\app.c(16): error:  #20: identifier "GPIO_Pin_5" is undefined
+compiling os_core.c...
+compiling os_flag.c...
+compiling os_mbox.c...
+compiling os_mem.c...
+compiling os_mutex.c...
+compiling os_q.c...
+compiling os_sem.c...
+compiling os_task.c...
+compiling os_time.c...
+compiling os_tmr.c...
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+compiling os_dbg.c...
+Target not created
+Build target 'LED-DEMO'
+compiling main.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_it.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_gpio.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling stm32f10x_rcc.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\Libraries\src\stm32f10x_rcc.c(120): warning:  #47-D: incompatible redefinition of macro "HSI_Value" (declared at line 512 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+compiling BSP.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\BSP.c(24): error:  #20: identifier "SystemFrequency" is undefined
+compiling led.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\BSP\led.c(27): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\BSP\led.c(28): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+..\BSP\led.c(28): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\BSP\led.c(30): error:  #20: identifier "GPIO_Pin_5" is undefined
+..\BSP\led.c(31): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+..\BSP\led.c(32): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+..\BSP\led.c(33): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\BSP\led.c(35): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+compiling app.c...
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 470 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 474 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 478 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 482 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 486 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 490 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 494 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 498 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 502 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 504 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 507 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+H:\电子爱好\KeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 511 of "H:\μ痓°?oüKeilC51V9.00\ARM\INC\ST\STM32F10x\stm32f10x.h")
+..\APP\app.c(8): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\APP\app.c(8): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\APP\app.c(8): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\APP\app.c(12): error:  #20: identifier "GPIO_Pin_4" is undefined
+..\APP\app.c(16): error:  #20: identifier "GPIO_Pin_5" is undefined
+Target not created
+Build target 'LED-DEMO'
+compiling main.c...
+compiling stm32f10x_it.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+compiling BSP.c...
+compiling led.c...
+compiling app.c...
+compiling os_core.c...
+compiling os_flag.c...
+compiling os_mbox.c...
+compiling os_mem.c...
+compiling os_mutex.c...
+compiling os_q.c...
+compiling os_sem.c...
+compiling os_task.c...
+compiling os_time.c...
+compiling os_tmr.c...
+compiling os_cpu_c.c...
+compiling os_dbg.c...
+linking...
+Program Size: Code=7504 RO-data=612 RW-data=84 ZI-data=3900  
+FromELF: creating hex file...
+".\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'LED-DEMO'
+linking...
+Program Size: Code=7504 RO-data=612 RW-data=84 ZI-data=3900  
+FromELF: creating hex file...
+".\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).

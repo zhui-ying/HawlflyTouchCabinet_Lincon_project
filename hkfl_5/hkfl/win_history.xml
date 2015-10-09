@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="text_20" class="text">
+  <properties>
+   <property name="left" type="short" value="40"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="105"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+4;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char indexstr[4];
+u8 index;
+memset(indexstr , 0 , 4);
+index = ($picture_ctrl.page_count*4)+4;
+sprintf(indexstr , "%d" , index);
+return indexstr;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_19" class="text">
+  <properties>
+   <property name="left" type="short" value="40"/>
+   <property name="top" type="short" value="255"/>
+   <property name="right" type="short" value="105"/>
+   <property name="bottom" type="short" value="286"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+3;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char indexstr[4];
+u8 index;
+memset(indexstr , 0 , 4);
+index = ($picture_ctrl.page_count*4)+3;
+sprintf(indexstr , "%d" , index);
+return indexstr;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_18" class="text">
+  <properties>
+   <property name="left" type="short" value="40"/>
+   <property name="top" type="short" value="125"/>
+   <property name="right" type="short" value="105"/>
+   <property name="bottom" type="short" value="156"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+1;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char indexstr[4];
+u8 index;
+memset(indexstr , 0 , 4);
+index = ($picture_ctrl.page_count*4)+1;
+sprintf(indexstr , "%d" , index);
+return indexstr;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_17" class="text">
+  <properties>
+   <property name="left" type="short" value="40"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="105"/>
+   <property name="bottom" type="short" value="216"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+2;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char indexstr[4];
+u8 index;
+memset(indexstr , 0 , 4);
+index = ($picture_ctrl.page_count*4)+2;
+sprintf(indexstr , "%d" , index);
+return indexstr;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="button_16" class="button">
+  <properties>
+   <property name="left" type="short" value="665"/>
+   <property name="top" type="short" value="370"/>
+   <property name="right" type="short" value="780"/>
+   <property name="bottom" type="short" value="420"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="返回"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_history");]]></event>
+  </events>
+ </widget>
+ <widget name="button_2" class="button">
+  <properties>
+   <property name="left" type="short" value="695"/>
+   <property name="top" type="short" value="215"/>
+   <property name="right" type="short" value="765"/>
+   <property name="bottom" type="short" value="305"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value=""/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="7" value="0"/>
+   <property name="frame" type="uchar" value="0"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="greedown.png"/>
+   <property name="up_pic_filename" type="string" length="32" value="bluedown.png"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if((($picture_ctrl.page_count+1)*4) >= $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if((($picture_ctrl.page_count+1)*4) >= $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[$picture_ctrl.page_count++;
+]]></event>
+  </events>
+ </widget>
+ <widget name="button" class="button">
+  <properties>
+   <property name="left" type="short" value="695"/>
+   <property name="top" type="short" value="95"/>
+   <property name="right" type="short" value="765"/>
+   <property name="bottom" type="short" value="185"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value=""/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="7" value="0"/>
+   <property name="frame" type="uchar" value="0"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="greenup.png"/>
+   <property name="up_pic_filename" type="string" length="32" value="blueup.png"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if($picture_ctrl.page_count == 0)
+{
+    return 0;
+}
+return 1;]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if($picture_ctrl.page_count == 0)
+{
+    return 0;
+}
+return 1;]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[$picture_ctrl.page_count--;
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_15" class="button">
+  <properties>
+   <property name="left" type="short" value="565"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="650"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="详细"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+4;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[
+$picture_ctrl.history_detail_index = $picture_ctrl.page_count*4+4;
+$$HmiCommit;
+hmi_window_show("win_history_detail");
+]]></event>
+  </events>
+ </widget>
+ <widget name="text_16" class="text">
+  <properties>
+   <property name="left" type="short" value="340"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="555"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+4;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char timestr[12];
+index = $picture_ctrl.page_count*4+4;
+memset(timestr , 0 , 12);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(timestr , datetime2str(history_msg.data_time)+5 , 11);//不显示年
+    return timestr;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_15" class="text">
+  <properties>
+   <property name="left" type="short" value="270"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="355"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+4;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+index = $picture_ctrl.page_count*4+4;
+if(1 == read_history_info(index , &history_msg))
+{
+    switch(history_msg.box_info.status)
+    {
+        case BOX_IDLE: return $picture_ctrl.history_idle;
+        case BOX_USED: return $picture_ctrl.history_used;
+        case BOX_LOCK: return $picture_ctrl.history_lock;
+        default : return $picture_ctrl.box_err;
+    }
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_14" class="text">
+  <properties>
+   <property name="left" type="short" value="155"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="240"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+4;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char virturlbuf[5];
+index = $picture_ctrl.page_count*4+4;
+memset(virturlbuf , 0 , 4);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(virturlbuf , history_msg.box_info.virtualnumber , VIRTUAL_NUM_LENGTH);
+}
+return virturlbuf;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="button_14" class="button">
+  <properties>
+   <property name="left" type="short" value="565"/>
+   <property name="top" type="short" value="255"/>
+   <property name="right" type="short" value="650"/>
+   <property name="bottom" type="short" value="286"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="详细"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+3;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[
+$picture_ctrl.history_detail_index = $picture_ctrl.page_count*4+3;
+$$HmiCommit;
+hmi_window_show("win_history_detail");
+]]></event>
+  </events>
+ </widget>
+ <widget name="text_13" class="text">
+  <properties>
+   <property name="left" type="short" value="340"/>
+   <property name="top" type="short" value="255"/>
+   <property name="right" type="short" value="555"/>
+   <property name="bottom" type="short" value="286"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+3;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char timestr[12];
+index = $picture_ctrl.page_count*4+3;
+memset(timestr , 0 , 12);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(timestr , datetime2str(history_msg.data_time)+5 , 11);//不显示年
+    return timestr;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_12" class="text">
+  <properties>
+   <property name="left" type="short" value="270"/>
+   <property name="top" type="short" value="255"/>
+   <property name="right" type="short" value="355"/>
+   <property name="bottom" type="short" value="286"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+3;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+index = $picture_ctrl.page_count*4+3;
+if(1 == read_history_info(index , &history_msg))
+{
+    switch(history_msg.box_info.status)
+    {
+        case BOX_IDLE: return $picture_ctrl.history_idle;
+        case BOX_USED: return $picture_ctrl.history_used;
+        case BOX_LOCK: return $picture_ctrl.history_lock;
+        default : return $picture_ctrl.box_err;
+    }
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_11" class="text">
+  <properties>
+   <property name="left" type="short" value="155"/>
+   <property name="top" type="short" value="255"/>
+   <property name="right" type="short" value="240"/>
+   <property name="bottom" type="short" value="286"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+3;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char virturlbuf[5];
+index = $picture_ctrl.page_count*4+3;
+memset(virturlbuf , 0 , 4);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(virturlbuf , history_msg.box_info.virtualnumber , VIRTUAL_NUM_LENGTH);
+}
+return virturlbuf;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="button_13" class="button">
+  <properties>
+   <property name="left" type="short" value="565"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="650"/>
+   <property name="bottom" type="short" value="216"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="详细"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+2;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[
+$picture_ctrl.history_detail_index = $picture_ctrl.page_count*4+2;
+$$HmiCommit;
+hmi_window_show("win_history_detail");
+]]></event>
+  </events>
+ </widget>
+ <widget name="text_10" class="text">
+  <properties>
+   <property name="left" type="short" value="340"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="555"/>
+   <property name="bottom" type="short" value="216"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+2;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char timestr[12];
+index = $picture_ctrl.page_count*4+2;
+memset(timestr , 0 , 12);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(timestr , datetime2str(history_msg.data_time)+5 , 11);//不显示年
+    return timestr;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_9" class="text">
+  <properties>
+   <property name="left" type="short" value="270"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="355"/>
+   <property name="bottom" type="short" value="216"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+2;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+index = $picture_ctrl.page_count*4+2;
+if(1 == read_history_info(index , &history_msg))
+{
+    switch(history_msg.box_info.status)
+    {
+        case BOX_IDLE: return $picture_ctrl.history_idle;
+        case BOX_USED: return $picture_ctrl.history_used;
+        case BOX_LOCK: return $picture_ctrl.history_lock;
+        default : return $picture_ctrl.box_err;
+    }
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_8" class="text">
+  <properties>
+   <property name="left" type="short" value="155"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="240"/>
+   <property name="bottom" type="short" value="216"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+2;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char virturlbuf[5];
+index = $picture_ctrl.page_count*4+2;
+memset(virturlbuf , 0 , 4);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(virturlbuf , history_msg.box_info.virtualnumber , VIRTUAL_NUM_LENGTH);
+}
+return virturlbuf;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="button_12" class="button">
+  <properties>
+   <property name="left" type="short" value="565"/>
+   <property name="top" type="short" value="120"/>
+   <property name="right" type="short" value="650"/>
+   <property name="bottom" type="short" value="151"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="详细"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+1;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[
+$picture_ctrl.history_detail_index = $picture_ctrl.page_count*4+1;
+$$HmiCommit;
+hmi_window_show("win_history_detail");
+]]></event>
+  </events>
+ </widget>
+ <widget name="text_7" class="text">
+  <properties>
+   <property name="left" type="short" value="340"/>
+   <property name="top" type="short" value="120"/>
+   <property name="right" type="short" value="555"/>
+   <property name="bottom" type="short" value="151"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+1;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char timestr[12];
+index = $picture_ctrl.page_count*4+1;
+memset(timestr , 0 , 12);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(timestr , datetime2str(history_msg.data_time)+5 , 11);//不显示年
+    return timestr;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_6" class="text">
+  <properties>
+   <property name="left" type="short" value="270"/>
+   <property name="top" type="short" value="120"/>
+   <property name="right" type="short" value="355"/>
+   <property name="bottom" type="short" value="151"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+1;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+index = $picture_ctrl.page_count*4+1;
+if(1 == read_history_info(index , &history_msg))
+{
+    switch(history_msg.box_info.status)
+    {
+        case BOX_IDLE: return $picture_ctrl.history_idle;
+        case BOX_USED: return $picture_ctrl.history_used;
+        case BOX_LOCK: return $picture_ctrl.history_lock;
+        default : return $picture_ctrl.box_err;
+    }
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_5" class="text">
+  <properties>
+   <property name="left" type="short" value="40"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="105"/>
+   <property name="bottom" type="short" value="91"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="序号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_4" class="text">
+  <properties>
+   <property name="left" type="short" value="155"/>
+   <property name="top" type="short" value="120"/>
+   <property name="right" type="short" value="240"/>
+   <property name="bottom" type="short" value="151"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[unsigned char index;
+index = $picture_ctrl.page_count*4+1;
+if(index > $picture_ctrl.win_history_count)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 index;
+HISTORY_MSG history_msg;
+static char virturlbuf[5];
+index = $picture_ctrl.page_count*4+1;
+memset(virturlbuf , 0 , 4);
+if(1 == read_history_info(index , &history_msg))
+{
+    memcpy(virturlbuf , history_msg.box_info.virtualnumber , VIRTUAL_NUM_LENGTH);
+}
+return virturlbuf;]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_3" class="text">
+  <properties>
+   <property name="left" type="short" value="420"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="485"/>
+   <property name="bottom" type="short" value="91"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="时间"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_2" class="text">
+  <properties>
+   <property name="left" type="short" value="270"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="335"/>
+   <property name="bottom" type="short" value="91"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="动作"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="155"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="220"/>
+   <property name="bottom" type="short" value="91"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="10" value="desk0.jpg"/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[
+$picture_ctrl.win_history_count = read_history_count();//读取最大历史记录
+
+]]></event>
+  </events>
+ </widget>
+</hmiwidget>

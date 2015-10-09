@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="timer" class="timer">
+  <properties>
+   <property name="left" type="short" value="30"/>
+   <property name="top" type="short" value="510"/>
+   <property name="right" type="short" value="129"/>
+   <property name="bottom" type="short" value="541"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="interval" type="ulong" value="2000"/>
+   <property name="enableinwindow" type="uchar" value="1"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="timer"><![CDATA[$picture_ctrl.win_ad_pic_ctrol_count++;
+if($picture_ctrl.win_ad_pic_ctrol_count == $picture_ctrl.win_ad_pic_num)
+{
+    $picture_ctrl.win_ad_pic_ctrol_count = 0;
+}
+
+]]></event>
+  </events>
+ </widget>
+ <widget name="mulpicture" class="mulpicture">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="filename0" type="string" length="32" value="ad1.jpg"/>
+   <property name="transparent0" type="uchar" value="0"/>
+   <property name="transparentcolor0" type="ulong" value="0"/>
+   <property name="filename1" type="string" length="32" value="ad2.jpg"/>
+   <property name="transparent1" type="uchar" value="0"/>
+   <property name="transparentcolor1" type="ulong" value="0"/>
+   <property name="filename2" type="string" length="32" value="ad3.jpg"/>
+   <property name="transparent2" type="uchar" value="0"/>
+   <property name="transparentcolor2" type="ulong" value="0"/>
+   <property name="filename3" type="string" length="32" value=""/>
+   <property name="transparent3" type="uchar" value="0"/>
+   <property name="transparentcolor3" type="ulong" value="0"/>
+   <property name="filename4" type="string" length="32" value=""/>
+   <property name="transparent4" type="uchar" value="0"/>
+   <property name="transparentcolor4" type="ulong" value="0"/>
+   <property name="filename5" type="string" length="32" value=""/>
+   <property name="transparent5" type="uchar" value="0"/>
+   <property name="transparentcolor5" type="ulong" value="0"/>
+   <property name="filename6" type="string" length="32" value=""/>
+   <property name="transparent6" type="uchar" value="0"/>
+   <property name="transparentcolor6" type="ulong" value="0"/>
+   <property name="filename7" type="string" length="32" value=""/>
+   <property name="transparent7" type="uchar" value="0"/>
+   <property name="transparentcolor7" type="ulong" value="0"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="index" expression="$picture_ctrl.win_ad_pic_ctrol_count"/>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("logo");
+hmi_window_hide("win_ad");
+]]></event>
+  </events>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="1" value=""/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="close"><![CDATA[hmi_window_show("logo");]]></event>
+  </events>
+ </widget>
+</hmiwidget>

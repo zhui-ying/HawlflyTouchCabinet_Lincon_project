@@ -1,0 +1,2 @@
+---ERROR---#The database picture_ctrl's data "logo_ctrl" has existed! Can't insert!
+---ERROR---#The database picture_ctrl's data "main_tip" has existed! Can't insert!

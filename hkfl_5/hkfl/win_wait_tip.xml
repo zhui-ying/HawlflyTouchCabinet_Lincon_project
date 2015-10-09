@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="timer" class="timer">
+  <properties>
+   <property name="left" type="short" value="15"/>
+   <property name="top" type="short" value="220"/>
+   <property name="right" type="short" value="114"/>
+   <property name="bottom" type="short" value="251"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="interval" type="ulong" value="1000"/>
+   <property name="enableinwindow" type="uchar" value="1"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="timer"><![CDATA[$picture_ctrl.win_wait_count++;
+if($picture_ctrl.win_wait_count > 10)//10s无回复
+{
+    $picture_ctrl.win_wait_sw = 1;
+    strcpy($picture_ctrl.win_wait_tip,"后台忙碌，请稍后再试");
+    $picture_ctrl.win_wait_count = 0;
+}
+]]></event>
+  </events>
+ </widget>
+ <widget name="button" class="button">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="115"/>
+   <property name="right" type="short" value="275"/>
+   <property name="bottom" type="short" value="160"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="确定"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="$picture_ctrl.win_wait_sw"/>
+   <dynamic propname="enable" expression="$picture_ctrl.win_wait_sw"/>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_wait_tip");
+]]></event>
+  </events>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="25"/>
+   <property name="right" type="short" value="405"/>
+   <property name="bottom" type="short" value="56"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="7" value="0"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="$picture_ctrl.win_wait_tip"/>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="picture" class="picture">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="399"/>
+   <property name="bottom" type="short" value="199"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="filename" type="string" length="38" value="desk1.jpg"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="transparentcolor" type="ulong" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="200"/>
+   <property name="top" type="short" value="100"/>
+   <property name="right" type="short" value="600"/>
+   <property name="bottom" type="short" value="300"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="1" value=""/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[$picture_ctrl.win_wait_count = 0;]]></event>
+  </events>
+ </widget>
+</hmiwidget>

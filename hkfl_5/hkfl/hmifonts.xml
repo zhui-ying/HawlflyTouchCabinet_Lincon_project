@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+    <font name="0" indexvar="system.LanguageID">
+        <fontfile family="楷体" size="20" weight="normal" italic="0" graylevel="4" filename="font_e9bb98e8aea45f30.qpf2" indexvalue="0" default="1">
+            <charset english="1" commonchinese="1" textlibrary="0" projectchar="0" unicode=""/>
+            <addChars value=""/>
+        </fontfile>
+    </font>
+    <font name="8" indexvar="system.LanguageID">
+        <fontfile family="楷体" size="40" weight="normal" italic="0" graylevel="4" filename="font_385f30.qpf2" indexvalue="0" default="1">
+            <charset english="1" commonchinese="1" textlibrary="0" projectchar="0" unicode=""/>
+            <addChars value=""/>
+        </fontfile>
+    </font>
+    <font name="12" indexvar="system.LanguageID">
+        <fontfile family="楷体" size="20" weight="normal" italic="0" graylevel="4" filename="font_31325f30.qpf2" indexvalue="0" default="1">
+            <charset english="1" commonchinese="1" textlibrary="0" projectchar="0" unicode=""/>
+            <addChars value=""/>
+        </fontfile>
+    </font>
+    <font name="16" indexvar="system.LanguageID">
+        <fontfile family="楷体" size="30" weight="normal" italic="0" graylevel="4" filename="font_31365f30.qpf2" indexvalue="0" default="1">
+            <charset english="1" commonchinese="1" textlibrary="0" projectchar="0" unicode=""/>
+            <addChars value=""/>
+        </fontfile>
+    </font>
+</fonts>

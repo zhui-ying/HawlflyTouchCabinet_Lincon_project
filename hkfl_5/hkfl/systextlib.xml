@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<textlibrary>
+    <text name="hmi_sys_text1" varname="system.LanguageID" defaultvalue="alarm" editable="1">
+        <value intvalue="0" textvalue="报警"/>
+        <value intvalue="1" textvalue="alarm"/>
+    </text>
+    <text name="hmi_sys_text2" varname="system.LanguageID" defaultvalue="restore" editable="1">
+        <value intvalue="0" textvalue="恢复"/>
+        <value intvalue="1" textvalue="restore"/>
+    </text>
+    <text name="hmi_sys_text3" varname="system.LanguageID" defaultvalue="confirm" editable="1">
+        <value intvalue="0" textvalue="确认"/>
+        <value intvalue="1" textvalue="confirm"/>
+    </text>
+    <text name="hmi_sys_text4" varname="system.LanguageID" defaultvalue="Time" editable="1">
+        <value intvalue="0" textvalue="报警时间"/>
+        <value intvalue="1" textvalue="Time"/>
+    </text>
+    <text name="hmi_sys_text5" varname="system.LanguageID" defaultvalue="Type" editable="1">
+        <value intvalue="0" textvalue="事件类型"/>
+        <value intvalue="1" textvalue="Type"/>
+    </text>
+    <text name="hmi_sys_text6" varname="system.LanguageID" defaultvalue="Variable" editable="1">
+        <value intvalue="0" textvalue="变量名"/>
+        <value intvalue="1" textvalue="Variable"/>
+    </text>
+    <text name="hmi_sys_text7" varname="system.LanguageID" defaultvalue="报警信息" editable="1">
+        <value intvalue="0" textvalue="报警信息"/>
+        <value intvalue="1" textvalue="Information"/>
+    </text>
+    <text name="hmi_sys_text8" varname="system.LanguageID" defaultvalue="Alarm value" editable="1">
+        <value intvalue="0" textvalue="报警值"/>
+        <value intvalue="1" textvalue="Alarm value"/>
+    </text>
+    <text name="hmi_sys_text9" varname="system.LanguageID" defaultvalue="Restore value" editable="1">
+        <value intvalue="0" textvalue="恢复值"/>
+        <value intvalue="1" textvalue="Restore value"/>
+    </text>
+    <text name="hmi_sys_text10" varname="system.LanguageID" defaultvalue="Limit value" editable="1">
+        <value intvalue="0" textvalue="界限值"/>
+        <value intvalue="1" textvalue="Limit value"/>
+    </text>
+    <text name="hmi_sys_text11" varname="system.LanguageID" defaultvalue="Alarm group" editable="1">
+        <value intvalue="0" textvalue="报警组"/>
+        <value intvalue="1" textvalue="Alarm group"/>
+    </text>
+    <text name="hmi_sys_text101" varname="system.LanguageID" defaultvalue="ArgusSoft industrial control software - Runtime" editable="0">
+        <value intvalue="0" textvalue="ArgusSoft工业控制软件运行环境"/>
+        <value intvalue="1" textvalue="ArgusSoft industrial control software - Runtime"/>
+    </text>
+    <text name="hmi_sys_text102" varname="system.LanguageID" defaultvalue="Type" editable="1">
+        <value intvalue="0" textvalue="类型"/>
+        <value intvalue="1" textvalue="Type"/>
+    </text>
+    <text name="hmi_sys_text103" varname="system.LanguageID" defaultvalue="Database Name" editable="1">
+        <value intvalue="0" textvalue="数据库名"/>
+        <value intvalue="1" textvalue="Database Name"/>
+    </text>
+    <text name="hmi_sys_text104" varname="system.LanguageID" defaultvalue="Data Name" editable="1">
+        <value intvalue="0" textvalue="数据名"/>
+        <value intvalue="1" textvalue="Data Name"/>
+    </text>
+    <text name="hmi_sys_text105" varname="system.LanguageID" defaultvalue="Data Value" editable="1">
+        <value intvalue="0" textvalue="数据值"/>
+        <value intvalue="1" textvalue="Data Value"/>
+    </text>
+    <text name="hmi_sys_text106" varname="system.LanguageID" defaultvalue="ArgusSoft industrial control software version" editable="0">
+        <value intvalue="0" textvalue="ArgusSoft工业控制软件 版本"/>
+        <value intvalue="1" textvalue="ArgusSoft industrial control software version"/>
+    </text>
+    <text name="hmi_sys_text107" varname="system.LanguageID" defaultvalue="Copyright(C)2004-2014 LinCon Inc." editable="0">
+        <value intvalue="0" textvalue="凌控公司版权所有(2004-2014)."/>
+        <value intvalue="1" textvalue="Copyright(C)2004-2014 LinCon Inc."/>
+    </text>
+    <text name="hmi_sys_text108" varname="system.LanguageID" defaultvalue="LCGen Version:" editable="1">
+        <value intvalue="0" textvalue="编译文件生成器版本:"/>
+        <value intvalue="1" textvalue="LCGen Version:"/>
+    </text>
+    <text name="hmi_sys_text201" varname="system.LanguageID" defaultvalue="Quit" editable="1">
+        <value intvalue="0" textvalue="退出"/>
+        <value intvalue="1" textvalue="Quit"/>
+    </text>
+    <text name="hmi_sys_text202" varname="system.LanguageID" defaultvalue="OK" editable="1">
+        <value intvalue="0" textvalue="确定"/>
+        <value intvalue="1" textvalue="OK"/>
+    </text>
+    <text name="hmi_sys_text203" varname="system.LanguageID" defaultvalue="Cancel" editable="1">
+        <value intvalue="0" textvalue="取消"/>
+        <value intvalue="1" textvalue="Cancel"/>
+    </text>
+    <text name="hmi_sys_text204" varname="system.LanguageID" defaultvalue="Delete" editable="1">
+        <value intvalue="0" textvalue="删除"/>
+        <value intvalue="1" textvalue="Delete"/>
+    </text>
+    <text name="hmi_sys_text205" varname="system.LanguageID" defaultvalue="Yes" editable="1">
+        <value intvalue="0" textvalue="是"/>
+        <value intvalue="1" textvalue="Yes"/>
+    </text>
+    <text name="hmi_sys_text206" varname="system.LanguageID" defaultvalue="No" editable="1">
+        <value intvalue="0" textvalue="否"/>
+        <value intvalue="1" textvalue="No"/>
+    </text>
+    <text name="hmi_sys_text207" varname="system.LanguageID" defaultvalue="Retry" editable="1">
+        <value intvalue="0" textvalue="重试"/>
+        <value intvalue="1" textvalue="Retry"/>
+    </text>
+    <text name="hmi_sys_text208" varname="system.LanguageID" defaultvalue="Abort" editable="1">
+        <value intvalue="0" textvalue="终止"/>
+        <value intvalue="1" textvalue="Abort"/>
+    </text>
+    <text name="hmi_sys_text209" varname="system.LanguageID" defaultvalue="Ignore" editable="1">
+        <value intvalue="0" textvalue="忽略"/>
+        <value intvalue="1" textvalue="Ignore"/>
+    </text>
+    <text name="hmi_sys_text301" varname="system.LanguageID" defaultvalue="Please insert USB disk first,then press OK when finished!" editable="1">
+        <value intvalue="0" textvalue="请先插入U盘,完成后点击确认按钮！"/>
+        <value intvalue="1" textvalue="Please insert USB disk first,then press OK when finished!"/>
+    </text>
+    <text name="hmi_sys_text302" varname="system.LanguageID" defaultvalue="USB disk load OK,please select:" editable="1">
+        <value intvalue="0" textvalue="U盘加载成功,请选择如下功能："/>
+        <value intvalue="1" textvalue="USB disk load OK,please select:"/>
+    </text>
+    <text name="hmi_sys_text303" varname="system.LanguageID" defaultvalue="Can't mount USB disk!" editable="1">
+        <value intvalue="0" textvalue="加载U盘失败！"/>
+        <value intvalue="1" textvalue="Can't mount USB disk!"/>
+    </text>
+    <text name="hmi_sys_text304" varname="system.LanguageID" defaultvalue="USB disk file copy" editable="1">
+        <value intvalue="0" textvalue="U盘文件拷贝"/>
+        <value intvalue="1" textvalue="USB disk file copy"/>
+    </text>
+    <text name="hmi_sys_text305" varname="system.LanguageID" defaultvalue="File copy OK!" editable="1">
+        <value intvalue="0" textvalue="文件拷贝成功！"/>
+        <value intvalue="1" textvalue="File copy OK!"/>
+    </text>
+    <text name="hmi_sys_text306" varname="system.LanguageID" defaultvalue="File copy failed!" editable="1">
+        <value intvalue="0" textvalue="文件拷贝失败！"/>
+        <value intvalue="1" textvalue="File copy failed!"/>
+    </text>
+    <text name="hmi_sys_text307" varname="system.LanguageID" defaultvalue="USB disk mount OK, press OK button to copy file!" editable="1">
+        <value intvalue="0" textvalue="U盘加载成功,请点击确认开始拷贝文件！"/>
+        <value intvalue="1" textvalue="USB disk mount OK, press OK button to copy file!"/>
+    </text>
+    <text name="hmi_sys_text401" varname="system.LanguageID" defaultvalue="Download" editable="1">
+        <value intvalue="0" textvalue="下载"/>
+        <value intvalue="1" textvalue="Download"/>
+    </text>
+    <text name="hmi_sys_text402" varname="system.LanguageID" defaultvalue="History data Download" editable="1">
+        <value intvalue="0" textvalue="历史数据下载"/>
+        <value intvalue="1" textvalue="History data Download"/>
+    </text>
+    <text name="hmi_sys_text403" varname="system.LanguageID" defaultvalue="Copying files,please waiting..." editable="1">
+        <value intvalue="0" textvalue="正在拷贝文件，请稍候..."/>
+        <value intvalue="1" textvalue="Copying files,please waiting..."/>
+    </text>
+    <text name="hmi_sys_text404" varname="system.LanguageID" defaultvalue="History data download OK!" editable="1">
+        <value intvalue="0" textvalue="历史数据下载成功！"/>
+        <value intvalue="1" textvalue="History data download OK!"/>
+    </text>
+    <text name="hmi_sys_text405" varname="system.LanguageID" defaultvalue="History data download failed!" editable="1">
+        <value intvalue="0" textvalue="历史数据下载失败！"/>
+        <value intvalue="1" textvalue="History data download failed!"/>
+    </text>
+    <text name="hmi_sys_text406" varname="system.LanguageID" defaultvalue="Download data" editable="1">
+        <value intvalue="0" textvalue="下载数据"/>
+        <value intvalue="1" textvalue="Download data"/>
+    </text>
+    <text name="hmi_sys_text407" varname="system.LanguageID" defaultvalue="Are you sure to delete all history data?" editable="1">
+        <value intvalue="0" textvalue="确信删除历史数据吗？"/>
+        <value intvalue="1" textvalue="Are you sure to delete all history data?"/>
+    </text>
+    <text name="hmi_sys_text408" varname="system.LanguageID" defaultvalue="Deleting history data,please waiting..." editable="1">
+        <value intvalue="0" textvalue="正在删除数据，请稍候..."/>
+        <value intvalue="1" textvalue="Deleting history data,please waiting..."/>
+    </text>
+    <text name="hmi_sys_text409" varname="system.LanguageID" defaultvalue="Delete history data OK!" editable="1">
+        <value intvalue="0" textvalue="历史数据删除成功！"/>
+        <value intvalue="1" textvalue="Delete history data OK!"/>
+    </text>
+    <text name="hmi_sys_text410" varname="system.LanguageID" defaultvalue="Delete history data failed!" editable="1">
+        <value intvalue="0" textvalue="历史数据删除失败！"/>
+        <value intvalue="1" textvalue="Delete history data failed!"/>
+    </text>
+    <text name="hmi_sys_text411" varname="system.LanguageID" defaultvalue="Time" editable="1">
+        <value intvalue="0" textvalue="时间"/>
+        <value intvalue="1" textvalue="Time"/>
+    </text>
+    <text name="hmi_sys_text501" varname="system.LanguageID" defaultvalue="TouchScreen adjustment" editable="1">
+        <value intvalue="0" textvalue="触摸屏校准"/>
+        <value intvalue="1" textvalue="TouchScreen adjustment"/>
+    </text>
+    <text name="hmi_sys_text502" varname="system.LanguageID" defaultvalue="Please press the crossing of lines in TouchScreen!" editable="1">
+        <value intvalue="0" textvalue="请点击触摸屏上十字中心点所在的位置！"/>
+        <value intvalue="1" textvalue="Please press the crossing of lines in TouchScreen!"/>
+    </text>
+    <text name="hmi_sys_text503" varname="system.LanguageID" defaultvalue="TouchScreen adjustment OK!" editable="1">
+        <value intvalue="0" textvalue="触摸屏校准成功！"/>
+        <value intvalue="1" textvalue="TouchScreen adjustment OK!"/>
+    </text>
+    <text name="hmi_sys_text504" varname="system.LanguageID" defaultvalue="TouchScreen adjustment failed,position deviation is too large" editable="1">
+        <value intvalue="0" textvalue="位置偏差过大，触摸屏校准失败！"/>
+        <value intvalue="1" textvalue="TouchScreen adjustment failed,position deviation is too large"/>
+    </text>
+    <text name="hmi_sys_text601" varname="system.LanguageID" defaultvalue="Please select the project file for downloading!" editable="1">
+        <value intvalue="0" textvalue="请选择需要更新的工程文件！"/>
+        <value intvalue="1" textvalue="Please select the project file for downloading!"/>
+    </text>
+    <text name="hmi_sys_text602" varname="system.LanguageID" defaultvalue="Loading data,please waiting..." editable="1">
+        <value intvalue="0" textvalue="正在加载数据，请等待..."/>
+        <value intvalue="1" textvalue="Loading data,please waiting..."/>
+    </text>
+    <text name="hmi_sys_text603" varname="system.LanguageID" defaultvalue="Start update" editable="1">
+        <value intvalue="0" textvalue="开始更新"/>
+        <value intvalue="1" textvalue="Start update"/>
+    </text>
+    <text name="hmi_sys_text604" varname="system.LanguageID" defaultvalue="System update" editable="1">
+        <value intvalue="0" textvalue="系统更新"/>
+        <value intvalue="1" textvalue="System update"/>
+    </text>
+    <text name="hmi_sys_text605" varname="system.LanguageID" defaultvalue="Updating system,please waiting..." editable="1">
+        <value intvalue="0" textvalue="正在更新，请稍候..."/>
+        <value intvalue="1" textvalue="Updating system,please waiting..."/>
+    </text>
+    <text name="hmi_sys_text606" varname="system.LanguageID" defaultvalue="System update OK!" editable="1">
+        <value intvalue="0" textvalue="系统更新成功！"/>
+        <value intvalue="1" textvalue="System update OK!"/>
+    </text>
+    <text name="hmi_sys_text607" varname="system.LanguageID" defaultvalue="System update failed!" editable="1">
+        <value intvalue="0" textvalue="系统更新失败！"/>
+        <value intvalue="1" textvalue="System update failed!"/>
+    </text>
+    <text name="hmi_sys_text608" varname="system.LanguageID" defaultvalue="System update failed,invalid HMI type,must be V2 version!" editable="1">
+        <value intvalue="0" textvalue="系统更新失败，人机界面类型不正确，要求为V2版本！"/>
+        <value intvalue="1" textvalue="System update failed,invalid HMI type,must be V2 version!"/>
+    </text>
+    <text name="hmi_sys_text609" varname="system.LanguageID" defaultvalue="System update failed,invalid HMI type,must not be V2 version!" editable="1">
+        <value intvalue="0" textvalue="系统更新失败，人机界面类型不正确，不能为V2版本！"/>
+        <value intvalue="1" textvalue="System update failed,invalid HMI type,must not be V2 version!"/>
+    </text>
+    <text name="hmi_sys_text701" varname="system.LanguageID" defaultvalue="File" editable="1">
+        <value intvalue="0" textvalue="文件"/>
+        <value intvalue="1" textvalue="File"/>
+    </text>
+    <text name="hmi_sys_text702" varname="system.LanguageID" defaultvalue="Shutdown" editable="1">
+        <value intvalue="0" textvalue="关闭系统"/>
+        <value intvalue="1" textvalue="Shutdown"/>
+    </text>
+    <text name="hmi_sys_text703" varname="system.LanguageID" defaultvalue="Reboot" editable="1">
+        <value intvalue="0" textvalue="重启系统"/>
+        <value intvalue="1" textvalue="Reboot"/>
+    </text>
+    <text name="hmi_sys_text704" varname="system.LanguageID" defaultvalue="Window" editable="1">
+        <value intvalue="0" textvalue="窗口"/>
+        <value intvalue="1" textvalue="Window"/>
+    </text>
+    <text name="hmi_sys_text705" varname="system.LanguageID" defaultvalue="About" editable="1">
+        <value intvalue="0" textvalue="关于"/>
+        <value intvalue="1" textvalue="About"/>
+    </text>
+    <text name="hmi_sys_text706" varname="system.LanguageID" defaultvalue="Help" editable="1">
+        <value intvalue="0" textvalue="帮助"/>
+        <value intvalue="1" textvalue="Help"/>
+    </text>
+    <text name="hmi_sys_text707" varname="system.LanguageID" defaultvalue="Are you sure to shutdown system?" editable="1">
+        <value intvalue="0" textvalue="确信关闭系统吗？"/>
+        <value intvalue="1" textvalue="Are you sure to shutdown system?"/>
+    </text>
+    <text name="hmi_sys_text708" varname="system.LanguageID" defaultvalue="Are you sure to reboot system?" editable="1">
+        <value intvalue="0" textvalue="确信重启系统吗？"/>
+        <value intvalue="1" textvalue="Are you sure to reboot system?"/>
+    </text>
+    <text name="hmi_sys_text709" varname="system.LanguageID" defaultvalue="Are you sure to quit program?" editable="1">
+        <value intvalue="0" textvalue="确信关闭程序吗？"/>
+        <value intvalue="1" textvalue="Are you sure to quit program?"/>
+    </text>
+    <text name="hmi_sys_text710" varname="system.LanguageID" defaultvalue="System init......" editable="1">
+        <value intvalue="0" textvalue="正在初始化......"/>
+        <value intvalue="1" textvalue="System init......"/>
+    </text>
+    <text name="hmi_sys_text711" varname="system.LanguageID" defaultvalue="File name" editable="1">
+        <value intvalue="0" textvalue="文件名"/>
+        <value intvalue="1" textvalue="File name"/>
+    </text>
+    <text name="hmi_sys_text712" varname="system.LanguageID" defaultvalue="Loading windows......" editable="1">
+        <value intvalue="0" textvalue="正在加载窗口......"/>
+        <value intvalue="1" textvalue="Loading windows......"/>
+    </text>
+    <text name="hmi_sys_text801" varname="system.LanguageID" defaultvalue="Input error" editable="1">
+        <value intvalue="0" textvalue="输入错误"/>
+        <value intvalue="1" textvalue="Input error"/>
+    </text>
+    <text name="hmi_sys_text802" varname="system.LanguageID" defaultvalue="Input value can't be null!" editable="1">
+        <value intvalue="0" textvalue="输入值不能为空！"/>
+        <value intvalue="1" textvalue="Input value can't be null!"/>
+    </text>
+    <text name="hmi_sys_text803" varname="system.LanguageID" defaultvalue="Incorrect data value!" editable="1">
+        <value intvalue="0" textvalue="输入值错误！"/>
+        <value intvalue="1" textvalue="Incorrect data value!"/>
+    </text>
+    <text name="hmi_sys_text804" varname="system.LanguageID" defaultvalue="Input value must great than the minimal value!" editable="1">
+        <value intvalue="0" textvalue="输入值必须大于等于最小值！"/>
+        <value intvalue="1" textvalue="Input value must great than the minimal value!"/>
+    </text>
+    <text name="hmi_sys_text805" varname="system.LanguageID" defaultvalue="Input value must less than the maximal value!" editable="1">
+        <value intvalue="0" textvalue="输入值必须小于等于最大值！"/>
+        <value intvalue="1" textvalue="Input value must less than the maximal value!"/>
+    </text>
+    <text name="hmi_sys_text806" varname="system.LanguageID" defaultvalue="Input data" editable="1">
+        <value intvalue="0" textvalue="输入数据"/>
+        <value intvalue="1" textvalue="Input data"/>
+    </text>
+    <text name="hmi_sys_text807" varname="system.LanguageID" defaultvalue="Please input:" editable="1">
+        <value intvalue="0" textvalue="请输入:"/>
+        <value intvalue="1" textvalue="Please input:"/>
+    </text>
+    <text name="hmi_sys_text808" varname="system.LanguageID" defaultvalue="Input text" editable="1">
+        <value intvalue="0" textvalue="输入文本"/>
+        <value intvalue="1" textvalue="Input text"/>
+    </text>
+    <text name="hmi_sys_text809" varname="system.LanguageID" defaultvalue="System" editable="1">
+        <value intvalue="0" textvalue="宋体"/>
+        <value intvalue="1" textvalue="System"/>
+    </text>
+    <text name="hmi_sys_text901" varname="system.LanguageID" defaultvalue="Security management" editable="1">
+        <value intvalue="0" textvalue="安全管理"/>
+        <value intvalue="1" textvalue="Security management"/>
+    </text>
+    <text name="hmi_sys_text902" varname="system.LanguageID" defaultvalue="Insufficient privileges, can't open the window!" editable="1">
+        <value intvalue="0" textvalue="权限不够，无法打开该窗口！"/>
+        <value intvalue="1" textvalue="Insufficient privileges, can't open the window!"/>
+    </text>
+    <text name="hmi_sys_text903" varname="system.LanguageID" defaultvalue="Password error, can't open the window!" editable="1">
+        <value intvalue="0" textvalue="密码输入不正确，无法打开该窗口！"/>
+        <value intvalue="1" textvalue="Password error, can't open the window!"/>
+    </text>
+    <text name="hmi_sys_text904" varname="system.LanguageID" defaultvalue="Insufficient privileges, can't execute operation!" editable="1">
+        <value intvalue="0" textvalue="权限不够，无法进行该操作！"/>
+        <value intvalue="1" textvalue="Password error, can't open the window!"/>
+    </text>
+    <text name="hmi_sys_text905" varname="system.LanguageID" defaultvalue="Password error, can't execute operation!" editable="1">
+        <value intvalue="0" textvalue="密码输入不正确，无法进行该操作！"/>
+        <value intvalue="1" textvalue="Password error, can't execute operation!"/>
+    </text>
+    <text name="hmi_sys_text906" varname="system.LanguageID" defaultvalue="Please input password:" editable="1">
+        <value intvalue="0" textvalue="请输入密码:"/>
+        <value intvalue="1" textvalue="Please input password:"/>
+    </text>
+</textlibrary>

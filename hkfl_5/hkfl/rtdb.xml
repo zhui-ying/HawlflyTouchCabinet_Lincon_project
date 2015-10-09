@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rtdbs>
+    <rtdb name="picture_ctrl" sync="0">
+        <data name="logo_ctrl" type="uchar" length="1" init="1" description=""/>
+        <data name="main_tip" type="string" length="40" init="请刷卡或触摸&quot;取件&quot;开箱" description=""/>
+        <data name="welcome" type="string" length="30" init="欢迎使用霍克富莱智能储物柜" description=""/>
+        <data name="open_box_tip" type="string" length="30" init="0001号箱门已开" description=""/>
+        <data name="open_box_wait" type="string" length="30" init="正在开箱，请等待" description=""/>
+        <data name="input_password_str" type="string" length="30" init="请输入密码" description=""/>
+        <data name="input_psd" type="string" length="10" init="" description=""/>
+        <data name="win_input_pwd_flag" type="bit" length="1" init="0" description=""/>
+        <data name="win_tip" type="string" length="30" init="" description=""/>
+        <data name="type_temp" type="uchar" length="1" init="0" description=""/>
+        <data name="win_wait_tip" type="string" length="30" init="0" description=""/>
+        <data name="win_wait_sw" type="bit" length="1" init="0" description="控制等待窗口确认按钮的可见性"/>
+        <data name="win_wait_count" type="uchar" length="1" init="0" description="等待数据返回计时"/>
+        <data name="win_type_min" type="bit" length="1" init="0" description=""/>
+        <data name="win_type_mid" type="bit" length="1" init="0" description=""/>
+        <data name="win_type_max" type="bit" length="1" init="0" description=""/>
+        <data name="win_save_next_flag" type="bit" length="1" init="0" description="继续存物窗口标志位，为1，显示窗口，为0，不显示"/>
+        <data name="input_psd_again" type="string" length="10" init="0" description="再次输入密码窗口"/>
+        <data name="set_year" type="long" length="4" init="0" description=""/>
+        <data name="set_month" type="uchar" length="1" init="0" description=""/>
+        <data name="set_day" type="uchar" length="1" init="0" description=""/>
+        <data name="set_hour" type="uchar" length="1" init="0" description=""/>
+        <data name="set_min" type="uchar" length="1" init="0" description=""/>
+        <data name="set_sec" type="uchar" length="1" init="0" description=""/>
+        <data name="win_ad_pic_ctrol_count" type="uchar" length="1" init="0" description=""/>
+        <data name="page_count" type="uchar" length="1" init="0" description="查看数据时的页面位置"/>
+        <data name="box_idle" type="string" length="5" init="空闲" description=""/>
+        <data name="box_use" type="string" length="5" init="使用" description=""/>
+        <data name="box_lock" type="string" length="5" init="锁定" description=""/>
+        <data name="box_max" type="string" length="5" init="大" description=""/>
+        <data name="box_mid" type="string" length="5" init="中" description=""/>
+        <data name="box_min" type="string" length="5" init="小" description=""/>
+        <data name="box_err" type="string" length="5" init="err" description=""/>
+        <data name="win_ad_pic_num" type="uchar" length="1" init="3" description="屏保广告图像计数"/>
+        <data name="win_logo_pic_num" type="uchar" length="1" init="2" description="logo广告图像计数"/>
+        <data name="win_history_count" type="uchar" length="1" init="0" description="记录最大记录数"/>
+        <data name="history_idle" type="string" length="5" init="取物" description=""/>
+        <data name="history_used" type="string" length="5" init="存物" description=""/>
+        <data name="history_lock" type="string" length="5" init="锁定" description=""/>
+        <data name="open_box_delay" type="uchar" length="1" init="0" description="显示开箱界面时的计时时间"/>
+        <data name="history_detail_index" type="uchar" length="1" init="0" description="记录需要详细显示的记录索引"/>
+    </rtdb>
+    <rtdb name="sys_set" sync="0">
+        <data name="box_num" type="uchar" length="1" init="18" description="箱子总数"/>
+        <data name="admin_psd" type="string" length="7" init="888888" description="管理员密码"/>
+        <data name="ad_flag" type="bit" length="1" init="0" description="0无广告，1有广告"/>
+        <data name="user_putin_psd" type="string" length="20" init="" description="临时的密码输入"/>
+        <data name="init_flag" type="uchar" length="1" init="0" description="为0需要重新初始化，为1不需要"/>
+        <data name="station_add" type="string" length="10" init="000001" description="站号"/>
+        <data name="open_all_box_flag" type="bit" length="1" init="0" description=""/>
+        <data name="recv_pack" type="array" length="128" init="0" description="网络数据接收缓存"/>
+        <data name="recv_pack_flag" type="uchar" length="1" init="0" description="网络数据接收标志"/>
+        <data name="send_pack" type="array" length="128" init="0" description="网络数据发送缓存"/>
+        <data name="send_pack_flag" type="uchar" length="1" init="0" description="网络数据发送标志"/>
+        <data name="heart_count" type="uchar" length="1" init="0" description="心跳包时间计时器"/>
+        <data name="hear_send_count" type="uchar" length="1" init="0" description="心跳包个数计数"/>
+        <data name="heart_delay_count" type="uchar" length="1" init="0" description="心跳包返回延时计时"/>
+        <data name="user_ic_enable_flag" type="bit" length="1" init="1" description="为1为用户IC，为0为送货员IC"/>
+        <data name="send_tm_enable_flag" type="bit" length="1" init="0" description="为1时可以表示读取条码值，为0禁止读取"/>
+        <data name="box_open_count" type="uchar" length="1" init="0" description="箱子开箱后计时"/>
+    </rtdb>
+    <rtdb name="box_msg" sync="0">
+        <data name="station_num" type="uchar" length="1" init="0" description="当前使用的箱子索引号"/>
+        <data name="station_port" type="uchar" length="1" init="0" description="当前使用的箱子的端口号"/>
+        <data name="virtualnumber" type="string" length="5" init="" description="虚拟箱号"/>
+        <data name="type" type="char" length="1" init="1" description="箱子型号"/>
+        <data name="status" type="char" length="1" init="0" description="箱子状态"/>
+        <data name="user_id" type="string" length="25" init="" description="用户ID"/>
+        <data name="user_phnum" type="string" length="25" init="" description="用户手机号"/>
+        <data name="pass_word" type="string" length="10" init="" description="用户密码"/>
+        <data name="send_num" type="string" length="25" init="" description="发货员编号"/>
+        <data name="send_id" type="string" length="25" init="" description="发货单信息"/>
+        <data name="send_psd" type="string" length="10" init="0" description="发货员密码"/>
+        <data name="timestr" type="string" length="12" init="0" description=""/>
+    </rtdb>
+    <rtdb name="test_parm" sync="0">
+        <data name="creat_file" type="bit" length="1" init="0" description=""/>
+        <data name="virtual_num" type="string" length="10" init="0" description=""/>
+        <data name="rename_flag" type="bit" length="1" init="0" description=""/>
+        <data name="port" type="uchar" length="1" init="0" description=""/>
+        <data name="num_index" type="uchar" length="1" init="0" description=""/>
+        <data name="new_virtual_num" type="string" length="10" init="0" description=""/>
+        <data name="send_buf" type="string" length="30" init="0" description=""/>
+        <data name="recv_buf" type="string" length="30" init="0" description=""/>
+        <data name="box_typ_min" type="bit" length="1" init="0" description=""/>
+        <data name="box_type_max" type="bit" length="1" init="0" description=""/>
+        <data name="ret" type="char" length="1" init="0" description=""/>
+        <data name="rec_len" type="uchar" length="1" init="0" description=""/>
+        <data name="station_num" type="uchar" length="1" init="0" description="当前使用的箱子索引号"/>
+        <data name="station_port" type="uchar" length="1" init="0" description="当前使用的箱子的端口号"/>
+        <data name="virtualnumber" type="string" length="5" init="" description="虚拟箱号"/>
+        <data name="type" type="string" length="2" init="0" description="箱子型号"/>
+        <data name="status" type="string" length="2" init="0" description="箱子状态"/>
+        <data name="user_id" type="string" length="25" init="" description="用户ID"/>
+        <data name="user_phnum" type="string" length="25" init="" description="用户手机号"/>
+        <data name="pass_word" type="string" length="10" init="" description="用户密码"/>
+        <data name="send_num" type="string" length="25" init="" description="发货员编号"/>
+        <data name="send_id" type="string" length="25" init="" description="发货单信息"/>
+        <data name="send_psd" type="string" length="10" init="0" description="发货员密码"/>
+        <data name="size" type="ulong" length="4" init="0" description="文件大小"/>
+        <data name="file_dir" type="string" length="30" init="" description=""/>
+    </rtdb>
+    <rtdb name="ARM_info" sync="0">
+        <data name="station_num" type="ushort" length="2" init="1" description="需要操作的箱子索引号"/>
+        <data name="station_port" type="ushort" length="2" init="1" description="箱子端口号"/>
+        <data name="send_comm" type="ushort" length="2" init="0" description="发送开箱指令"/>
+        <data name="back_comm" type="ushort" length="2" init="0" description="箱子返回指令"/>
+        <data name="send_id0" type="ushort" length="2" init="23" description="运货单号，2位"/>
+        <data name="send_id1" type="ushort" length="2" init="45" description="运货单号，2位"/>
+        <data name="send_id2" type="ushort" length="2" init="234" description="运货单号，2位"/>
+        <data name="send_id3" type="ushort" length="2" init="23" description="运货单号，2位"/>
+        <data name="send_id4" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id5" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id6" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id7" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id8" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id9" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id10" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="send_id11" type="ushort" length="2" init="0" description="运货单号，2位"/>
+        <data name="user_id0" type="ushort" length="2" init="0" description="用户ID卡号，2位"/>
+        <data name="user_id1" type="ushort" length="2" init="0" description="用户ID卡号，2位"/>
+        <data name="send_id_flag" type="ushort" length="2" init="0" description="运货单刷单标志"/>
+        <data name="user_id_flag" type="ushort" length="2" init="0" description="用户刷卡标志"/>
+    </rtdb>
+</rtdbs>

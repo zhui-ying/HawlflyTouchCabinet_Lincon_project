@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alarm>
+    <alarmlog size="100"/>
+    <alarmhistory enable="0" remaindays="1" path="flash" usedatabase="0"/>
+</alarm>

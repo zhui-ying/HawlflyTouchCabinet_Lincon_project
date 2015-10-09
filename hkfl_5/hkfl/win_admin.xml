@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="get_pack_6" class="button">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="314"/>
+   <property name="right" type="short" value="590"/>
+   <property name="bottom" type="short" value="364"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="重启"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[sys_shutdown(3);
+]]></event>
+  </events>
+ </widget>
+ <widget name="get_pack_5" class="button">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="226"/>
+   <property name="right" type="short" value="590"/>
+   <property name="bottom" type="short" value="276"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="使用情况"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_disp_box_status");]]></event>
+  </events>
+ </widget>
+ <widget name="get_pack_4" class="button">
+  <properties>
+   <property name="left" type="short" value="75"/>
+   <property name="top" type="short" value="314"/>
+   <property name="right" type="short" value="275"/>
+   <property name="bottom" type="short" value="364"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="测试窗"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_test");
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_6" class="button">
+  <properties>
+   <property name="left" type="short" value="650"/>
+   <property name="top" type="short" value="365"/>
+   <property name="right" type="short" value="775"/>
+   <property name="bottom" type="short" value="410"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="返回"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_admin");]]></event>
+  </events>
+ </widget>
+ <widget name="button_5" class="button">
+  <properties>
+   <property name="left" type="short" value="75"/>
+   <property name="top" type="short" value="226"/>
+   <property name="right" type="short" value="275"/>
+   <property name="bottom" type="short" value="276"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="查询使用记录"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_history");]]></event>
+  </events>
+ </widget>
+ <widget name="button_4" class="button">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="138"/>
+   <property name="right" type="short" value="590"/>
+   <property name="bottom" type="short" value="188"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="系统设置"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_sys_set");]]></event>
+  </events>
+ </widget>
+ <widget name="button_3" class="button">
+  <properties>
+   <property name="left" type="short" value="75"/>
+   <property name="top" type="short" value="138"/>
+   <property name="right" type="short" value="275"/>
+   <property name="bottom" type="short" value="188"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="箱格操作"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_box_operate");]]></event>
+  </events>
+ </widget>
+ <widget name="button_2" class="button">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="590"/>
+   <property name="bottom" type="short" value="100"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="箱格设置"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_box_set");]]></event>
+  </events>
+ </widget>
+ <widget name="button" class="button">
+  <properties>
+   <property name="left" type="short" value="75"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="275"/>
+   <property name="bottom" type="short" value="100"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="柜体设置"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_cabinet_set");]]></event>
+  </events>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="10" value="desk0.jpg"/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+</hmiwidget>

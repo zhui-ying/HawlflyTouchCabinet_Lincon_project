@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwindow>
+    <window name="main" caption="main" filename="main.xml" display_on_startup="1" enable="1" is_navigation_window="0"/>
+    <window name="logo" caption="logo" filename="logo.xml" display_on_startup="1" enable="1" is_navigation_window="0"/>
+    <window name="win_get_pack" caption="win_get_pack" filename="win_get_pack.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_test" caption="win_test" filename="win_test.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_box_tip" caption="win_box_tip" filename="win_box_tip.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_input_password" caption="win_input_password" filename="win_input_password.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_admin" caption="win_admin" filename="win_admin.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="TextKeyboard6" caption="TextKeyboard6" filename="TextKeyboard6.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_cabinet_set" caption="win_cabinet_set" filename="win_cabinet_set.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_tip" caption="win_tip" filename="win_tip.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_box_set" caption="win_box_set" filename="win_box_set.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_box_operate" caption="win_box_operate" filename="win_box_operate.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_sender_psd" caption="win_sender_psd" filename="win_sender_psd.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_wait_tip" caption="win_wait_tip" filename="win_wait_tip.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_input_send_tm" caption="win_input_send_tm" filename="win_input_send_tm.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_input_pnum_type" caption="win_input_pnum_type" filename="win_input_pnum_type.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_save_pack_next_tip" caption="win_save_pack_next_tip" filename="win_save_pack_next_tip.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="NumKeyboard3" caption="NumKeyboard3" filename="NumKeyboard3.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_sys_set" caption="win_sys_set" filename="win_sys_set.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_change_admin_psd" caption="win_change_admin_psd" filename="win_change_admin_psd.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_sys_set_time" caption="win_sys_set_time" filename="win_sys_set_time.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_sys_reset" caption="win_sys_reset" filename="win_sys_reset.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_ad" caption="win_ad" filename="win_ad.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_disp_box_status" caption="win_disp_box_status" filename="win_disp_box_status.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_history" caption="win_history" filename="win_history.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+    <window name="win_history_detail" caption="win_history_detail" filename="win_history_detail.xml" display_on_startup="0" enable="1" is_navigation_window="0"/>
+</hmiwindow>

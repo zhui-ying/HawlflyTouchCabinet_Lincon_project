@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="button_2" class="button">
+  <properties>
+   <property name="left" type="short" value="705"/>
+   <property name="top" type="short" value="210"/>
+   <property name="right" type="short" value="775"/>
+   <property name="bottom" type="short" value="300"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value=""/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="7" value="0"/>
+   <property name="frame" type="uchar" value="0"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="greedown.png"/>
+   <property name="up_pic_filename" type="string" length="32" value="bluedown.png"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if((($picture_ctrl.page_count+1)*8) >= $sys_set.box_num)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if((($picture_ctrl.page_count+1)*8) >= $sys_set.box_num)
+{
+    return 0;
+}
+return 1;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[$picture_ctrl.page_count++;
+]]></event>
+  </events>
+ </widget>
+ <widget name="button" class="button">
+  <properties>
+   <property name="left" type="short" value="705"/>
+   <property name="top" type="short" value="90"/>
+   <property name="right" type="short" value="775"/>
+   <property name="bottom" type="short" value="180"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value=""/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="7" value="0"/>
+   <property name="frame" type="uchar" value="0"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="greenup.png"/>
+   <property name="up_pic_filename" type="string" length="32" value="blueup.png"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if($picture_ctrl.page_count == 0)
+{
+    return 0;
+}
+return 1;]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if($picture_ctrl.page_count == 0)
+{
+    return 0;
+}
+return 1;]]></code>
+   </dynamic>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[$picture_ctrl.page_count--;
+]]></event>
+  </events>
+ </widget>
+ <widget name="text_13" class="text">
+  <properties>
+   <property name="left" type="short" value="245"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="310"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 4) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 4) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 4;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_29" class="text">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="215"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 4) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 4) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 4;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_12" class="text">
+  <properties>
+   <property name="left" type="short" value="60"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="125"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 4) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 4) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 4;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_11" class="text">
+  <properties>
+   <property name="left" type="short" value="245"/>
+   <property name="top" type="short" value="250"/>
+   <property name="right" type="short" value="310"/>
+   <property name="bottom" type="short" value="281"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 3) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 3) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 3;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_28" class="text">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="250"/>
+   <property name="right" type="short" value="215"/>
+   <property name="bottom" type="short" value="281"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 3) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 3) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 3;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_10" class="text">
+  <properties>
+   <property name="left" type="short" value="60"/>
+   <property name="top" type="short" value="250"/>
+   <property name="right" type="short" value="125"/>
+   <property name="bottom" type="short" value="281"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 3) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 3) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 3;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_8" class="text">
+  <properties>
+   <property name="left" type="short" value="245"/>
+   <property name="top" type="short" value="180"/>
+   <property name="right" type="short" value="310"/>
+   <property name="bottom" type="short" value="211"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 2) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 2) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 2;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_27" class="text">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="180"/>
+   <property name="right" type="short" value="215"/>
+   <property name="bottom" type="short" value="211"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 2) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 2) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 2;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_7" class="text">
+  <properties>
+   <property name="left" type="short" value="60"/>
+   <property name="top" type="short" value="180"/>
+   <property name="right" type="short" value="125"/>
+   <property name="bottom" type="short" value="211"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 2) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 2) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 2;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_25" class="text">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="110"/>
+   <property name="right" type="short" value="215"/>
+   <property name="bottom" type="short" value="141"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 1) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 1) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 1;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_6" class="text">
+  <properties>
+   <property name="left" type="short" value="245"/>
+   <property name="top" type="short" value="110"/>
+   <property name="right" type="short" value="310"/>
+   <property name="bottom" type="short" value="141"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 1) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 1) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 1;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_5" class="text">
+  <properties>
+   <property name="left" type="short" value="60"/>
+   <property name="top" type="short" value="110"/>
+   <property name="right" type="short" value="125"/>
+   <property name="bottom" type="short" value="141"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 1) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 1) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 1;
+read_box_info_station_num(box_index , &box_info);
+memcpy(box_vir_num , box_info.virtualnumber,4);
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_20" class="text">
+  <properties>
+   <property name="left" type="short" value="570"/>
+   <property name="top" type="short" value="250"/>
+   <property name="right" type="short" value="635"/>
+   <property name="bottom" type="short" value="281"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 7) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 7) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 7;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_33" class="text">
+  <properties>
+   <property name="left" type="short" value="475"/>
+   <property name="top" type="short" value="250"/>
+   <property name="right" type="short" value="540"/>
+   <property name="bottom" type="short" value="281"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 7) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 7) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 7;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_18" class="text">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="250"/>
+   <property name="right" type="short" value="450"/>
+   <property name="bottom" type="short" value="281"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 7) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 7) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 7;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_17" class="text">
+  <properties>
+   <property name="left" type="short" value="570"/>
+   <property name="top" type="short" value="180"/>
+   <property name="right" type="short" value="635"/>
+   <property name="bottom" type="short" value="211"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 6) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 6) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 6;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_32" class="text">
+  <properties>
+   <property name="left" type="short" value="475"/>
+   <property name="top" type="short" value="180"/>
+   <property name="right" type="short" value="540"/>
+   <property name="bottom" type="short" value="211"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 6) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 6) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 6;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_16" class="text">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="180"/>
+   <property name="right" type="short" value="450"/>
+   <property name="bottom" type="short" value="211"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 6) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 6) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 6;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_15" class="text">
+  <properties>
+   <property name="left" type="short" value="570"/>
+   <property name="top" type="short" value="110"/>
+   <property name="right" type="short" value="635"/>
+   <property name="bottom" type="short" value="141"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 5) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 5) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 5;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_31" class="text">
+  <properties>
+   <property name="left" type="short" value="475"/>
+   <property name="top" type="short" value="110"/>
+   <property name="right" type="short" value="540"/>
+   <property name="bottom" type="short" value="141"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 5) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 5) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+
+box_index = $picture_ctrl.page_count*8 + 5;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_14" class="text">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="110"/>
+   <property name="right" type="short" value="450"/>
+   <property name="bottom" type="short" value="141"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 5) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 5) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 5;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="button_12" class="button">
+  <properties>
+   <property name="left" type="short" value="665"/>
+   <property name="top" type="short" value="360"/>
+   <property name="right" type="short" value="780"/>
+   <property name="bottom" type="short" value="410"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="返回"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_disp_box_status");]]></event>
+  </events>
+ </widget>
+ <widget name="text_30" class="text">
+  <properties>
+   <property name="left" type="short" value="475"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="540"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 8) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 8) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 8;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.type == BOX_TYPE_MIN)
+{
+    return $picture_ctrl.box_min;
+}
+if(box_info.type == BOX_TYPE_MID)
+{
+    return $picture_ctrl.box_mid;
+}
+if(box_info.type == BOX_TYPE_MAX)
+{
+    return $picture_ctrl.box_max;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_26" class="text">
+  <properties>
+   <property name="left" type="short" value="475"/>
+   <property name="top" type="short" value="40"/>
+   <property name="right" type="short" value="560"/>
+   <property name="bottom" type="short" value="71"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="型号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_21" class="text">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="40"/>
+   <property name="right" type="short" value="220"/>
+   <property name="bottom" type="short" value="71"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="型号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_19" class="text">
+  <properties>
+   <property name="left" type="short" value="570"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="630"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 8) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 8) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[u8 box_index;
+BOX_MSG box_info;
+
+box_index = $picture_ctrl.page_count*8 + 8;
+read_box_info_station_num(box_index , &box_info);
+if(box_info.status == BOX_IDLE)
+{
+    return $picture_ctrl.box_idle;
+}
+if(box_info.status == BOX_USED)
+{
+    return $picture_ctrl.box_use;
+}
+if(box_info.status == BOX_LOCK)
+{
+    return $picture_ctrl.box_lock;
+}
+return $picture_ctrl.box_err;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_9" class="text">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="320"/>
+   <property name="right" type="short" value="450"/>
+   <property name="bottom" type="short" value="351"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 8) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="enable" expression="code" type="script">
+    <code><![CDATA[if(($picture_ctrl.page_count*8 + 8) > $sys_set.box_num)//箱子编号大于箱子总数
+{
+    return 0;//不显示
+}
+return 1;
+]]></code>
+   </dynamic>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char box_vir_num[5];
+u8 box_index;
+BOX_MSG box_info;
+
+memset(box_vir_num , 0 , 5);
+box_index = $picture_ctrl.page_count*8 + 8;
+if(1 == read_box_info_station_num(box_index , &box_info))
+{
+    memcpy(box_vir_num , box_info.virtualnumber,4);
+}
+return box_vir_num;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_4" class="text">
+  <properties>
+   <property name="left" type="short" value="390"/>
+   <property name="top" type="short" value="40"/>
+   <property name="right" type="short" value="450"/>
+   <property name="bottom" type="short" value="71"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_3" class="text">
+  <properties>
+   <property name="left" type="short" value="565"/>
+   <property name="top" type="short" value="40"/>
+   <property name="right" type="short" value="625"/>
+   <property name="bottom" type="short" value="71"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="状态"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_2" class="text">
+  <properties>
+   <property name="left" type="short" value="245"/>
+   <property name="top" type="short" value="40"/>
+   <property name="right" type="short" value="320"/>
+   <property name="bottom" type="short" value="71"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="状态"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="60"/>
+   <property name="top" type="short" value="40"/>
+   <property name="right" type="short" value="125"/>
+   <property name="bottom" type="short" value="71"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="10" value="desk0.jpg"/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[$picture_ctrl.page_count = 0;
+
+]]></event>
+  </events>
+ </widget>
+</hmiwidget>

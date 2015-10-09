@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params autosave="0" period="1000">
+    <data dbname="syskeyboard" dataname="NumberKeyboardWindow" value="NumKeyboard3" write_device_on_startup="0"/>
+    <data dbname="syskeyboard" dataname="TextKeyboardWindow" value="TextKeyboard6" write_device_on_startup="0"/>
+    <data dbname="sys_set" dataname="init_flag" value="0" write_device_on_startup="0"/>
+    <data dbname="sys_set" dataname="box_num" value="18" write_device_on_startup="0"/>
+    <data dbname="sys_set" dataname="admin_psd" value="888888" write_device_on_startup="0"/>
+    <data dbname="sys_set" dataname="station_add" value="000001" write_device_on_startup="0"/>
+    <data dbname="picture_ctrl" dataname="win_ad_pic_num" value="3" write_device_on_startup="0"/>
+    <data dbname="picture_ctrl" dataname="win_logo_pic_num" value="2" write_device_on_startup="0"/>
+</params>

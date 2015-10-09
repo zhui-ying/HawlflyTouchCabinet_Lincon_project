@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="keyesc" class="keyesc">
+  <properties>
+   <property name="left" type="short" value="273"/>
+   <property name="top" type="short" value="74"/>
+   <property name="right" type="short" value="333"/>
+   <property name="bottom" type="short" value="134"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_2" class="text">
+  <properties>
+   <property name="left" type="short" value="25"/>
+   <property name="top" type="short" value="35"/>
+   <property name="right" type="short" value="320"/>
+   <property name="bottom" type="short" value="60"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="2"/>
+   <property name="fontname" type="string" length="3" value="24"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[static char str[100];
+int i,offset = 0;
+if($syskeyboard.PasswordChar)
+{
+    memset(str,0,100);
+    for(i = 0;i<strlen($syskeyboard.KeyboardBuffer);i++)
+    {
+        offset += sprintf(str+offset,"*");
+    }
+    return str;
+}
+else
+    return $syskeyboard.KeyboardBuffer;
+]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="keyenter" class="keyenter">
+  <properties>
+   <property name="left" type="short" value="188"/>
+   <property name="top" type="short" value="280"/>
+   <property name="right" type="short" value="333"/>
+   <property name="bottom" type="short" value="340"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="type" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_14" class="keycode">
+  <properties>
+   <property name="left" type="short" value="102"/>
+   <property name="top" type="short" value="280"/>
+   <property name="right" type="short" value="162"/>
+   <property name="bottom" type="short" value="340"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="."/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_13" class="keycode">
+  <properties>
+   <property name="left" type="short" value="16"/>
+   <property name="top" type="short" value="280"/>
+   <property name="right" type="short" value="76"/>
+   <property name="bottom" type="short" value="340"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="0"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_11" class="keycode">
+  <properties>
+   <property name="left" type="short" value="187"/>
+   <property name="top" type="short" value="74"/>
+   <property name="right" type="short" value="247"/>
+   <property name="bottom" type="short" value="134"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="9"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_10" class="keycode">
+  <properties>
+   <property name="left" type="short" value="102"/>
+   <property name="top" type="short" value="74"/>
+   <property name="right" type="short" value="162"/>
+   <property name="bottom" type="short" value="134"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="8"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_9" class="keycode">
+  <properties>
+   <property name="left" type="short" value="17"/>
+   <property name="top" type="short" value="74"/>
+   <property name="right" type="short" value="77"/>
+   <property name="bottom" type="short" value="134"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="7"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_8" class="keycode">
+  <properties>
+   <property name="left" type="short" value="273"/>
+   <property name="top" type="short" value="142"/>
+   <property name="right" type="short" value="333"/>
+   <property name="bottom" type="short" value="202"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="1"/>
+   <property name="isbackspace" type="uchar" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_7" class="keycode">
+  <properties>
+   <property name="left" type="short" value="187"/>
+   <property name="top" type="short" value="142"/>
+   <property name="right" type="short" value="247"/>
+   <property name="bottom" type="short" value="202"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="6"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_6" class="keycode">
+  <properties>
+   <property name="left" type="short" value="102"/>
+   <property name="top" type="short" value="142"/>
+   <property name="right" type="short" value="162"/>
+   <property name="bottom" type="short" value="202"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="5"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_5" class="keycode">
+  <properties>
+   <property name="left" type="short" value="17"/>
+   <property name="top" type="short" value="142"/>
+   <property name="right" type="short" value="77"/>
+   <property name="bottom" type="short" value="202"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="4"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_4" class="keycode">
+  <properties>
+   <property name="left" type="short" value="273"/>
+   <property name="top" type="short" value="212"/>
+   <property name="right" type="short" value="333"/>
+   <property name="bottom" type="short" value="272"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="-"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_3" class="keycode">
+  <properties>
+   <property name="left" type="short" value="187"/>
+   <property name="top" type="short" value="212"/>
+   <property name="right" type="short" value="247"/>
+   <property name="bottom" type="short" value="272"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="3"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode_2" class="keycode">
+  <properties>
+   <property name="left" type="short" value="102"/>
+   <property name="top" type="short" value="212"/>
+   <property name="right" type="short" value="162"/>
+   <property name="bottom" type="short" value="272"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="2"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="keycode" class="keycode">
+  <properties>
+   <property name="left" type="short" value="17"/>
+   <property name="top" type="short" value="212"/>
+   <property name="right" type="short" value="77"/>
+   <property name="bottom" type="short" value="272"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="keyvalue" type="string" length="32" value="1"/>
+   <property name="isbackspace" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="25"/>
+   <property name="top" type="short" value="18"/>
+   <property name="right" type="short" value="205"/>
+   <property name="bottom" type="short" value="33"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="提示信息"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="7" value="0"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="$syskeyboard.Prompt"/>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="350"/>
+   <property name="bottom" type="short" value="350"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="13408358"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="18" value="TextKeyboard6.jpg"/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[$syskeyboard.KeyboardBuffer = "\0";]]></event>
+  </events>
+ </widget>
+</hmiwidget>

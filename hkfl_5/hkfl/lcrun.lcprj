@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lcrun name="hkfl_1" description="主界面设计" devicename="LC070S V2">
+    <slaveip addr="192.168.1.202"/>
+    <compile defines="" include="%PRJ_DIR%\src\include.h" sources="&quot;%PRJ_DIR%\src\GPRS.c&quot; &quot;%PRJ_DIR%\src\user_function.c&quot; &quot;%PRJ_DIR%\src\box_info.c&quot; " libs_win="" libs_hmi=""/>
+    <display mode="0"/>
+    <hmiSavePath path="0"/>
+    <hmilang value="gb18030"/>
+</lcrun>

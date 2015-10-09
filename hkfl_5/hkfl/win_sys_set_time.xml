@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="button_12" class="button">
+  <properties>
+   <property name="left" type="short" value="635"/>
+   <property name="top" type="short" value="370"/>
+   <property name="right" type="short" value="750"/>
+   <property name="bottom" type="short" value="420"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="返回"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_sys_set_time");]]></event>
+  </events>
+ </widget>
+ <widget name="button_11" class="button">
+  <properties>
+   <property name="left" type="short" value="320"/>
+   <property name="top" type="short" value="245"/>
+   <property name="right" type="short" value="435"/>
+   <property name="bottom" type="short" value="295"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="确认"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[if(1 == setsystime($picture_ctrl.set_year,$picture_ctrl.set_month,$picture_ctrl.set_day,$picture_ctrl.set_hour,$picture_ctrl.set_min,$picture_ctrl.set_sec))
+{
+    //设置成功
+        strcpy($picture_ctrl.win_tip , "系统时间设置成功");
+}else
+{
+   strcpy($picture_ctrl.win_tip , "系统时间设置失败"); 
+}
+$$HmiCommit;
+hmi_window_show("win_tip"); 
+]]></event>
+  </events>
+ </widget>
+ <widget name="numinput_6" class="numinput">
+  <properties>
+   <property name="left" type="short" value="650"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="705"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="picture_ctrl.set_sec"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="60"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="numinput_5" class="numinput">
+  <properties>
+   <property name="left" type="short" value="535"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="590"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="picture_ctrl.set_min"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="60"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="numinput_4" class="numinput">
+  <properties>
+   <property name="left" type="short" value="415"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="470"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="picture_ctrl.set_hour"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="60"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="numinput_3" class="numinput">
+  <properties>
+   <property name="left" type="short" value="295"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="365"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="picture_ctrl.set_day"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="31"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="numinput_2" class="numinput">
+  <properties>
+   <property name="left" type="short" value="180"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="235"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="picture_ctrl.set_month"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="12"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="numinput" class="numinput">
+  <properties>
+   <property name="left" type="short" value="30"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="129"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="picture_ctrl.set_year"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="2000"/>
+   <property name="inputmaxvalue" type="double" value="3000"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext_7" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="700"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="765"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="3613" value="81100AFFB666811015FFFFDB811016B6663A812004DB903A01200A812014FFDB90812015903A6681201690DBFF01300401300A813012FFFFB6813013DB903A8130143A0066813015B6FFFF01400401400A814010FFFFDB814011FFB666814012660000814013003A90814014B6FFFF815003B6660081500466B6FF01500A81500EFFFFDB81500FFFB666815010903A0081501100003A8150123A90DB815013DBFFFF01600301600A81600BFFFFDB81600CFFDB9081600DDB903A81600E903A0001600F816010003A9081601190DBFF017003817004FFB666817005FFB666817006FFB666817007FFB666817008FFB666817009FFB66601700A81700B903A0081700C3A000001700D01700E81700F666666817010DBB666817011FFB666817012FFB666817013FFB666817014FFB666817015FFB666817016FFB666817017FFB666817018FFB666817019FFB66681701AFFB66681701BFFB66681701CFFB66681701DFFB666818002FFFFB601800301800401800501800601800701800801800901800A01800B01800C01800D01800E01800F01801001801101801201801301801401801501801601801701801801801901801A01801B01801C81801D00006681900266000081900300003A81900466B6FF81900566B6FF81900666B6FF81900766B6FF81900866B6FF81900966B6FF01900A81900B66B6FF81900C66B6FF01900D81900E66B6DB81900F66B6FF81901066B6FF81901166B6FF81901266B6FF81901366B6FF8190143A90DB8190153A90DB8190163A90DB8190173A90DB8190183A90DB8190193A90DB81901A3A90DB81901B3A90DB81901C3A90DB81901DB6FFFF01A00281A00390DBFF01A00A81A00D66B6FF81A00E903A0081A00FFFFFB681A01DFFB66681B001B6660001B00281B009DB903A01B00A01B00E81B00F66000081B010DB903A81B011FFFFB601B01D81C00100006601C00281C008DB909001C00901C00A81C00E66B6FF01C00F01C01081C011663A9081C01CFFDB9081C01D003A9081D001B6FFFF81D0020066B681D003FFDBDB81D008B6FFFF81D009003A9001D00A81D00F66B6FF81D01066B6FF81D011DBFFDB81D012FFB66681D013DBDBDB81D01C3A000081D01DDBFFFF81E003DBFFFF81E009DBFFFF81E00A003A9081E00FFFFFB681E010FFB66681E011903A6681E01266B6FF81E01BFFFFDB81E01C00003A81F00ADBFFFF81F00BFFFFDB81F00CFFFFB681F00DFFB66681F00EB6660081F00F66003A81F0103A90DB81F011B6FFFF81F01B903A0081F01C90DBFF820006FFFFDB820007FFFFB6820008FFDB90820009FFB66682000ADB903A82000B903A0082000C66000082000D00006682000E0066B682000F90DBFF82001AFFFFB602001B821006DBDBFF8210076600008210083A000002100982100A00003A82100B003A9082100C3A90DB82100DB6FFFF82101A66000082101B0066B682200700003A82200800003A8220093A90DB82200A90DBFF82200BDBFFFF822019DB903A02201A82300790DBFF8230083A90B6823018FFFFB602301982301A3A90DB824017FFFFDB82401866000082401900003A825000DB903A825001DB903A825002DB903A825003DB903A825004DB903A825005DB903A825006DB903A825007DB903A825008DB903A825009DB903A82500ADB903A82500BDB903A82500CDB903A82500DDB903A82500EDB903A82500FDB903A825010DB903A825011DB903A825012DB903A825013DB903A825014DBDBDB825017903A0002501882501990DBFF8260003A90DB02600182600200003A82600300003A82600400003A82600500003A82600600003A82600700003A82600800003A82600900003A82600A00003A82600B00003A82600C00003A82600D00003A82600E00003A82600F00003A82601000003A026011026012026013826016B666000260178260183A90DB02700182700290DBFF82700390DBFF82700490DBFF82700590DBFF82700690DBFF82700790DBFF82700890DBFF82700990DBFF82700A90DBFF82700B90DBFF82700C90DBFF82700D90DBFF82700E90DBFF82700F90DBFF82701090DBFF82701166B6FF82701266B6FF82701366B6FF827014FFFFDB827015B666000270168270170066B682800166B6FF828006FFFFDB828013FFDB90828014903A000280158280160066B6829006B6B6DB829007DB903A829012FFB6668290133A00000290148290150066B682A00700003A82A008FFB66682A010FFDB9082A011B6660002A01202A01382A0143A90DB82B00790DBFF02B00882B009DB903A82B00AFFFFDB82B00FDB903A82B0103A000002B01182B01200003A82B01366B6FF82C0080066B602C00982C00A903A0082C00BFFB66682C00CFFFFB682C00F66B6FF02C01002C01182C01290DBFF82D00900006602D00A02D00B82D00C66000082D00DDB909082D01066B6FF82D011003A9082E009B6FFFF82E00A0066B682E00B003A9082E00C0066B682E00DB6FFFF82E011DBFFFF82F00BDBFFFF"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="4" value="秒"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext_6" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="580"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="645"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="2641" value="811010FFDB9081200FDB903A8120106690DB81300EFFB66681300F0066B681301DB6660081400DDB903A81400E00006681401CFFFFDB81401D00003A81500CDB903A81500D00003A81500EB6FFFF81501C903A0081501D90DBFF81600AFFFFDB81600BB6660081600C00003A81600D90DBDB81601BFFB66681601C003A90817009FFDB9081700A903A0081700B00003A81700C90DBFF81700D903A0081701AFFDB9001701B81701CDBFFFF818007FFFFB6818008DB903A8180093A000081800A00006681800B90DBFF01800D818019FFFFB681801A3A000081801B66B6FF819005FFFFDB819006FFB666819007660000019008819009003A9081900AB6FFFF01900D819018FFDB9081901966000081901A0066B681A003FFFFB681A004FFB66681A005903A0001A00681A00700003A81A0083A90DB81A009DBFFFF01A00D81A016FFFFB681A017DB903A81A0183A000081A0190066B681B001FFDB9081B002DB903A81B00366000001B00401B00581B006003A9081B00790DBFF01B00D81B013FFFFDB81B014FFDB9081B015DB903A81B01666000001B01781B0180066B681C0013A3A9001C00201C00381C00400006681C0053A90DB81C006DBFFFF01C00D81C00FFFFFDB81C010FFFFB681C011FFDB9081C012DB903A81C013903A0081C0143A000001C01581C016003A9081C01766B6FF81D001DBFFFF81D00200003A81D00300669081D004B6FFFF01D00D81D00EB6660081D00F903A0081D01066000081D0113A000001D01281D01300003A81D014003A9081D01566B6FF81D016DBFFFF81E00290DBFF81E003B6B6DB01E00D01E00E81E00F00003A81E01000006681E0110066B681E0123A90DB81E01390DBFF81E014DBFFFF01F00D81F00E66B6FF81F00F90DBFF81F010B6FFFF81F01BDB903A02000D02001B02100D02101B82101CFFFFB6822000FFB690822001FFFFB6822002FFFFDB02200D02201B82201C66000082201DFFDB9082300090DBFF823001660000823002903A00823003DB903A823004FFDB90823005FFFFDB02300D02301B02301C82301D3A000082400100006682400266B6FF8240030066B68240043A0066824005903A00824006DB903A824007FFFFB602400D824018FFFFDB824019FFFFB682401ADB903A02401B02401C82401D66B6FF825001B6FFFF825004B6FFFF8250053A90DB825006000066825007660000825008FFB666825009FFFFDB02500D82500EFFFFB682500FFFFFB6825010FFFFB6825011FFDB90825012FFDB90825013FFB666825014FFB666825015DB903A825016DB903A825017B66600825018903A0082501966000002501A02501B82501C3A90DB826006B6FFFF8260073A90DB026008826009903A0082600AFFFFB682600CFFB66602600D82600E66000082600F6600008260106600008260113A00008260123A000002601302601402601502601602601782601800003A82601900006682601A003A9082601B66B6FF82700866B6FF82700900003A82700A66000082700BFFDB9082700C66B6FF02700D82700E00003A82700F003A90827010003A90827011003A908270120066B68270130066B68270140066B68270153A90DB8270163A90DB82701766B6FF82701890DBFF827019B6FFFF82701ADBFFFF82800990DBFF02800A82800B3A000082800CFFB66682800D66B6FF82800E3A90B682800FDBFFFF828010DBFFFF828011DBFFFF82900A66B6FF02900B02900C82900DFFDB9082A00B0066B602A00C82A00D3A000082A00EFFFFDB02B00C02B00D82B00E903A0082C00C3A90DB02C00D02C00E02D00D82D00E003A9002E00D82E00EDBFFFF82F00D3A90DB"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="4" value="分"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext_5" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="470"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="535"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="3937" value="812004FFDB90812005FFDB90812006FFFFB6812007FFFFB6812008FFFFB6812009FFFFB681200AFFFFB681200BFFFFB681200CFFFFB681200DFFFFB681200EFFFFB681200FFFFFB6812010FFFFB6812011FFFFB6812012FFFFB6812013FFFFB6812014FFFFB6812015FFFFB6812016FFFFB6812017FFDB90812018FFDB90812019FFDB9081201AFFDB908130043A00008130053A000081300666000081300766000081300866000081300966000081300A66000081300B66000081300C66000081300D66000081300E66000081300F6600008130106600008130116600008130126600008130136600008130146600008130156600008130166600008130173A00008130183A00008130193A000081301A6690DB81400466B6FF014005814006003A90814007003A90814008003A90814009003A9081400A003A9081400B003A9081400C003A9001400D81400E003A9081400F003A90814010003A90814011003A90814012003A90814013003A90814014003A90814015003A90014016814017003A90814018003A90814019003A90015005815006DBFFFF815007DBFFFF815008DBFFFF815009DBFFFF81500ADBFFFF81500BDBFFFF81500CDBFFFF01500D81500EDBFFFF81500FDBFFFF815010DBFFFF815011DBFFFF815012DBFFFF815013DBFFFF815014DBFFFF815015DBFFFF015016815017DBFFFF815018DBFFFF815019DBFFFF01600501600D01601601700501700D01701601800501800D018016819004FFFFB6019005819006FFFFB6819007FFFFB6819008FFFFB6819009FFFFB681900AFFFFB681900BFFFFB681900CFFFFB601900D81900EFFFFB681900FFFFFB6819010FFFFB6819011FFFFB6819012FFFFB6819013FFFFB6819014FFFFB6819015FFFFB6019016819017FFFFB6819018FFFFB6819019FFFFB681A00466000001A00581A00666000081A00766000081A00866000081A00966000081A00A66000081A00B66000081A00C66000001A00D81A00E66000081A00F66000081A01066000081A01166000081A01266000081A01366000081A01466000081A01566000001A01681A01766000081A01866000081A0199090DB81B00400006601B00581B006003A9081B007003A9081B008003A9081B009003A9081B00A003A9081B00B003A9081B00C003A9081B00D003A9081B00E003A9081B00F003A9081B010003A9081B011003A9081B012003A9081B013003A9081B014003A9081B015003A9081B016003A9081B01700006681B01800006681C004B6FFFF81C0050066B681C006DBFFFF81C007DBFFFF81C00890660081C009DBFFFF81C00ADBFFFF81C00BDBFFFF81C00CDBFFFF81C00DDBFFFF81C00EDBFFFF81C00FDBFFFF81C010DBFFFF81C011DBFFFF81C012DBFFFF81C013DBFFFF81C014DBFFFF81C015DBFFFF81C016DBFFFF81C017B6FFFF81C018B6FFFF01D00881D009B6909001E00881E009DBFFFF81E00CFFDBDB81E00DFFDB9001F00881F00CDBFFFF81F00D3A000081F00EFFB66681F00FFFFFDB02000882000D66B6FF02000E82000F903A00820010FFB666820011FFFFB602100882100E3A90DB02100F021010821011660000821012B6660082101BFFFFB602200882200F0066B682201000003A82201100003A822012003A9082201B66000002300882301090DBFF82301190DBFF823012DBFFFF02301B02400802401B02500802501B82501CB6660082501DFFFFB6826000FFFFDB826001FFFFDB826002FFFFDB826003FFFFDB826004FFFFDB826005FFFFDB826006FFFFDB826007FFFFDB026008826009FFFFDB82600AFFFFDB82600BFFFFDB82600CFFFFDB82600DFFFFDB82600EFFFFDB82600FFFFFDB826010FFFFDB826011FFFFDB826012FFFFDB826013FFFFDB826014FFFFDB826015FFFFDB826016FFFFDB826017FFFFDB826018FFFFDB826019FFFFDB82601AFFFFB602601B02601C82601D66003A827000903A66827001903A00827002903A00827003903A00827004903A00827005903A00827006903A00827007903A00027008827009903A0082700A903A0082700B903A0082700C903A0082700D903A0082700E903A0082700F903A00827010903A00827011903A00827012903A00827013903A00827014903A00827015903A00827016903A00827017903A00827018903A00827019903A0082701A66000002701B02701C82701D90DBFF828000B6FFFF02800182800200003A82800300006682800400006682800500006682800600006682800700006602800882800900006682800A00006682800B00006682800C00006682800D00006682800E00006682800F00006682801000006682801100006682801200006682801300006682801400006682801500006682801600006682801700006682801800006682801900006682801A00006682801B003A9082801C66B6FF829001003A9082900290B6B6829003B6FFFF829004B6FFFF829005B6FFFF829006B6FFFF829007B6FFFF029008829009B6FFFF82900AB6FFFF82900BB6FFFF82900CB6FFFF82900DB6FFFF82900EB6FFFF82900FB6FFFF829010B6FFFF829011B6FFFF829012B6FFFF829013B6FFFF829014B6FFFF829015B6FFFF829016B6FFFF829017B6FFFF829018B6FFFF829019B6FFFF82901AB6FFFF82901BDBFFFF82A001DBFFFF82A002B6DBFF02A00882B007FFDB9002B00882C0073A000002C00882D00766B6FF02D00882E00866B6FF82E009B6909082F009DBFFFF"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="4" value="时"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext_4" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="360"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="425"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="2779" value="816001FFFFB6816002FFFFB6816003FFFFB6816004FFFFB6816005FFFFB6816006FFFFB6816007FFFFB6816008FFFFB6816009FFFFB681600AFFFFB681600BFFFFB681600CFFFFDB81600DFFFFDB81600EFFFFDB81600FFFFFDB816010FFFFDB816011FFFFDB816012FFFFDB816013FFFFB6816014FFFFB6816015FFFFB6816016FFFFB6816017FFFFB6816018FFFFB6816019FFFFB681601AFFFFB681601BFFFFB681601CFFFFB6817001B6B6FF81700266000081700366000081700466000081700566000081700666000081700766000081700866000081700966000081700A66000081700B66000081700C903A0081700D903A0081700E903A0081700F903A00817010903A00817011903A00817012903A0081701366000081701466000081701566000081701666000081701766000081701866000081701966000081701A66000081701B66000081701C660000018002818003003A90818004003A90818005003A90818006003A90818007003A90818008003A90818009003A9081800A003A9081800B003A9081800C003A9001800D81800E003A9081800F003A90818010003A90818011003A90818012003A90818013003A90818014003A90818015003A90818016003A90818017003A90818018003A9001801981801A003A9081801B003A9081801C3A90DB019002819003DBFFFF819004DBFFFF819005DBFFFF819006DBFFFF819007DBFFFF819008DBFFFF819009DBFFFF81900ADBFFFF81900BDBFFFF81900CDBFFFF01900D81900EDBFFFF81900FDBFFFF819010DBFFFF819011DBFFFF819012DBFFFF819013DBFFFF819014DBFFFF819015DBFFFF819016DBFFFF819017DBFFFF819018DBFFFF01901981901ADBFFFF81901BDBFFFF01A00201A00D01A01901B00201B00D01B01901C00201C00D01C01901D00201D00D01D01901E00201E00D01E01901F00201F00D01F01902000202000D02001902100202100D02101902200202200D02201902300202300D02301902400202400D02401902500202500D02501902600202600D026019027002827003FFFFDB827004FFFFDB827005FFFFDB827006FFFFDB827007FFFFDB827008FFFFDB827009FFFFDB82700AFFFFDB82700BFFFFDB82700CFFFFDB02700D82700EFFFFDB82700FFFFFDB827010FFFFDB827011FFFFDB827012FFFFDB827013FFFFDB827014FFFFDB827015FFFFDB827016FFFFDB827017FFFFDB827018FFFFDB02701982701AFFFFDB82701BFFFFDB82701CFFFFDB828001FFB690028002828003903A00828004903A00828005903A00828006903A00828007903A00828008903A00828009903A0082800A903A0082800B903A0082800C903A0002800D82800E903A0082800F903A00828010903A00828011903A00828012903A00828013903A00828014903A00828015903A00828016903A00828017903A00828018903A0002801982801A903A0082801B903A0082801C903A0082900190DBFF02900202900382900400006682900500006682900600006682900700006682900800006682900900006682900A00006682900B00006682900C00006682900D00006682900E00006682900F00006682901000006682901100006682901200006682901300006682901400006682901500006682901600006682901700006682901800006682901900003A82901A00003A82901B00003A82901C3A90DB82A0023A90DB82A0033A66B682A004B6FFFF82A005B6FFFF82A006B6FFFF82A007B6FFFF82A008B6FFFF82A009B6FFFF82A00AB6FFFF82A00BB6FFFF82A00CB6FFFF82A00DB6FFFF82A00EB6FFFF82A00FB6FFFF82A010B6FFFF82A011B6FFFF82A012B6FFFF82A013B6FFFF82A014B6FFFF82A015B6FFFF82A016B6FFFF82A017B6FFFF82A018B6FFFF82A01990DBFF82A01A90DBFF82A01B90DBFF82B003DBFFFF"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="4" value="日"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext_3" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="230"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="295"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="2473" value="81101DFFFFDB81201D903A0081301CFFDB9081301D003A9081401BFFB66681401C3A006681401DDBFFFF81501ADB903A81501B00003A81501CB6FFFF816018FFDB90816019B6660081601A00003A81601B90DBFF817015FFFFB6817016FFB666817017B666008170183A000081701900006681701A90DBFF818001FFDB90818002FFDB90818003FFFFB6818004FFFFB6818005FFFFB6818006FFFFB6818007FFFFB6818008FFFFB6818009FFFFB681800AFFFFB681800BFFFFB681800CFFFFB681800DFFFFB681800EFFFFB681800FFFDB90818010FFDB90818011FFDB90818012FFB666818013DB903A818014B6660081801566000001801681801700003A8180180066B6818019B6FFFF8190016690DB8190023A000081900366000081900466000081900566000081900666000081900766000081900866000081900966000081900A66000081900B66000081900C66000081900D66000081900E66000081900F3A00008190103A00008190113A00000190120190130190148190150000668190160066B681901790DBFF01A00281A003003A9081A004003A9081A005003A9081A006003A9081A007003A9081A008003A9081A009003A9001A00A81A00B003A9081A00C003A9081A00D003A9081A00E003A9081A00F0066B681A0100066B601A01181A0120066B681A0133A90DB81A01466B6FF81A015B6FFFF01B00281B003DBFFFF81B004DBFFFF81B005DBFFFF81B006DBFFFF81B007DBFFFF81B008DBFFFF81B009DBFFFF01B00A81B00BDBFFFF81B00CDBFFFF81B00DDBFFFF81B00EDBFFFF01B01101C00201C00A01C01101D00201D00A01D01101E00201E00A01E01101F00201F00A01F01102000202000A02001102100202100A02101182101ADBDBDB82101BDB903A02200202200A02201102201B02300202300A02301102301B02400202400A02401102401B82401CFFFFB602500202500A02501102501B82501C66000082501DFFDB9002600202600A02601182601AFFFFB602601B02601C82601D3A003A827001FFDB90027002827003B66600827004B66600827005B66600827006B66600827007B66600827008B66600827009B6660002700A82700BB6660082700CB6660082700DB6660082700EB6660082700FB66600827010B66600027011827012B66600827013B66600827014B66600827015B66600827016B66600827017B66600827018B66600827019B6660082701A66000002701B02701C82701D90DBFF8280013A3A9002800202800382800400003A82800500003A82800600003A82800700003A82800800003A82800900003A82800A00003A82800B00003A82800C00003A82800D00003A82800E00003A82800F00003A82801000003A82801100003A82801200003A82801300003A82801400003A82801500003A82801600003A82801700003A82801800003A82801900003A82801A00003A82801B00006682801C3A90DB829001DBFFFF82900200006682900366B6DB82900490DBFF82900590DBFF82900690DBFF82900790DBFF82900890DBFF82900990DBFF82900A90DBFF82900B90DBFF82900C90DBFF82900D90DBFF82900E90DBFF82900F90DBFF82901090DBFF82901190DBFF82901290DBFF82901390DBFF82901490DBFF82901590DBFF82901690DBFF82901790DBFF82901890DBFF82901990DBFF82901A90DBFF82901BB6FFFF82A002B6FFFF82A003DBDBFF"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="4" value="月"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext_2" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="125"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="190"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="2257" value="81100CFFFFB681100DFFDBDB811014FFB66681200BFFDB9081200C663A9081200DDBFFFF01201481300AFFB66681300B3A006681300CDBFFFF013014814008FFFFDB814009DB903A81400A00006681400BB6FFFF014014815007FFDB90815008903A0081500900006681500AB6FFFF015014816005FFFFB6816006B666008160073A0000816008003A90816009B6FFFF81600BFFFFDB81600CFFFFDB81600DFFFFDB81600EFFFFDB81600FFFFFDB816010FFFFDB816011FFFFDB816012FFFFDB816013FFFFDB016014817003FFFFB6817004DB903A8170056600000170068170073A90DB817008DBFFFF81700BB6B6DB81700C903A0081700D903A0081700E903A0081700F903A00817010903A00817011903A00817012903A00817013903A00017014818000FFFFDB818001FFDB90818002DB903A81800366000001800401800581800666B6FF01800C81800D00003A81800E00003A81800F00003A81801000003A81801100003A81801200003A81801300003A018014819000903A008190013A000001900281900300003A8190043A90DB01900501900C81900D90DBFF81900E90DBFF81900F90DBFF81901090DBFF81901190DBFF81901290DBFF81901390DBFF01901481A0003A90DB01A00181A002003A9081A00390DBFF01A00501A00C01A01481B00100006681B002DBFFDB01B00501B00C01B01481C001B6FFFF81C002DBDBFF01C00501C00C01C01401D00501D00C01D01401E00501E00C01E01401F00501F00C01F014020005820006FFB666820007FFB666820008FFB666820009FFB66682000AFFB66682000BFFB66602000C82000DFFB66682000EFFB66682000FFFB666820010FFB666820011FFB666820012FFB666820013FFB666020014820015FFB666820016FFB666820017FFB666820018FFB666820019FFB66682001AFFB66682001BDB903A82001CDB903A82001DDB903A02100502100602100702100802100902100A02100B02100C02100D02100E02100F02101002101102101202101302101402101502101602101702101802101902101A02101B02101C02101D0220058220063A90DB8220073A90DB8220083A90DB8220093A90DB82200A3A90DB82200B3A90DB02200C82200D3A90DB82200E3A90DB82200F3A90DB8220103A90DB8220113A90DB8220123A90DB8220133A90DB0220148220153A90DB8220163A90DB8220173A90DB8220183A90DB8220193A90DB82201A3A90DB82201B0066B682201C0066B682201D3A90DB02300502300C02301402400502400C02401402500502500C02501402600502600C02601402700502700C02701402800582800BFFDB9002800C02801402900582900B3A000002900C02901482A004DB903A02A00582A00B3A90DB02A00C02A01482B003DB909002B00402B00582B00C3A90DB82B00DDB909082B013B6660002B01482C003B6FFFF82C00400006602C00582C00DB6FFFF82C012B6660002C01302C01482D004B6FFFF82D00500006682D006FFFFB682D01266B6FF02D01302D01482E005B6FFFF82E006B6B6FF82E01366B6FF02E01482F01466B6FF"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="4" value="年"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="bmptext" class="bmptext">
+  <properties>
+   <property name="left" type="short" value="290"/>
+   <property name="top" type="short" value="85"/>
+   <property name="right" type="short" value="500"/>
+   <property name="bottom" type="short" value="116"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="fontname" type="string" length="7" value="SimSun"/>
+   <property name="pointsize" type="long" value="25"/>
+   <property name="fontweight" type="long" value="400"/>
+   <property name="fontitalic" type="uchar" value="0"/>
+   <property name="fontunderline" type="uchar" value="0"/>
+   <property name="fontstrikeout" type="uchar" value="0"/>
+   <property name="bitmap" type="string" length="17935" value="81600BFFFFDB81700B903A0001800B01900B81A001DB903A81A002FFFFDB01A00B81B0013A90DB81B002903A0081B003DB903A81B004FFDB9081B005FFFFDB81B00AFFFFDB01B00B81B00CFFFFB681B00DFFFFB681B00EFFFFB681B00FFFFFB681B010FFFFB681B011FFFFB681B012FFFFB681B013FFFFB681B014FFFFB681B015FFFFB681B016FFFFB681B017FFFFB681B018FFDB9081B019DB903A81B01AFFFFDB81C002003A9001C00381C0043A000081C005903A0081C006B6660081C00A903A0001C00B81C00C66000081C00D66000081C00E66000081C00F66000081C01066000081C01166000081C01266000081C01366000081C01466000081C01566000081C01666000081C01766000081C0183A000001C01981C01A903A0081C01BFFFFB681D002DBFFFF81D003003A9001D00481D00500003A81D0063A90DB81D00A3A90DB01D00B81D00C0066B681D00D0066B681D00E0066B681D00F0066B681D0100066B681D0110066B681D0120066B681D0130066B681D0140066B681D0150066B681D0160066B681D01700669001D01801D01981D01A00006681D01BB6B6FF81E003DBFFFF81E00466B6FF81E00590DBFF81E00B003A9081E017903A0001E01881E0190066B681E01AB6FFFF81F00BDBFFFF81F00CFFFFDB81F016B6660081F01700006681F01866B6FF82000C903A00820015B66600820016003A90820017B6FFFF821004B6660002100C821014DB903A8210153A90DB821016DBFFFF022004822008FFFFDB02200C8220140066B6023004823008903A0002300C82300EFFFFB682300FFFFFDB823010FFFFDB823011FFFFDB823012FFFFDB823013FFFFDB823014FFFFDB823015FFFFDB823016FFFFDB823017FFFFDB823018FFFFDB823019FFFFDB82301AFFFFDB82301BFFFFDB82301CFFFFDB82301DFFFFB602400402400802400C82400E6666B682400F903A00824010903A00824011903A00824012903A00824013903A00824014903A00824015903A00824016903A00824017903A00824018903A00824019903A0082401A903A0082401B903A0082401C903A0082401D66000002500402500802500C02500F825010003A90825011003A90025012825013003A90825014003A90825015003A90025016825017003A90825018003A90825019003A9082501A003A9082501B003A9082501C003A9082501D3A90DB02600402600802600C02600F826010DBFFFF826011DBFFFF026012826013DBFFFF826014DBFFFF826015DBFFFF026016826017DBFFFF826018DBFFFF826019DBFFFF82601ADBFFFF82601BDBFFFF82601CDBFFFF02700402700802700C02700F02701202701602800402800802800C02800F028012028016829000DB903A829001DB903A829002DB903A829003FFB666029004829005FFB666829006FFB666829007FFB666029008829009FFB66682900AFFB66682900BFFB66602900C02900F02901202901682A000003A9002A00102A00202A00302A00402A00502A00602A00702A00802A00902A00A02A00B02A00C02A00F02A01202A01682A01BFFFFB682B000DBFFFF02B00182B00266B6FF82B00366B6FF02B00482B00566B6FF82B00666B6FF82B00766B6FF02B00882B00966B6FF82B00A66B6FF82B00B66B6FF02B00C02B00F02B01202B01682B01B66000082C00166B6FF02C00402C00802C00C02C00F02C01202C01602C01B02D00402D00802D00C02D00F02D01202D01602D01B82D01CDB903A02E00402E00802E00C02E00F02E01202E01602E01B02E01C82E01DB6660002F00482F007DB903A02F00802F00C82F00EFFDB9002F00F82F010FFB66682F011FFB66602F01282F013FFB66682F014FFB66682F015FFB66602F01682F017FFB66682F018FFB66682F019FFB66682F01AFFB66602F01B02F01C82F01D003A90030004830006DB909003000703000803000C83000E3A3A9003000F03001003001103001203001303001403001503001603001703001803001903001A03001B83001C003A9083001DDBFFFF831003DB903A031004831006B6FFFF83100700006603100883100BFFDB9003100C83100EDBFFFF83100F00003A83101066B6FF83101166B6FF83101266B6FF83101366B6FF83101466B6FF83101566B6FF83101666B6FF83101766B6FF83101866B6FF83101966B6FF83101A66B6FF83101B66B6FF83101CDBFFFF032003032004832007B6FFFF832008003A9083200AFFDB9083200B3A000003200C83200F90DBFF83300366B6FF83300400003A833005FFFFDB833008DBFFFF83300A3A66B603300B03300C83400490DBFF834005B6B6DB83400B3A90DB03400C83500C66B6FF838006B6660083800DFFB66683800EFFFFB6838015FFDB90838016DB903A03900683900BFFFFDB83900CFFB66603900D83900E66000083900FFFB6B68390153A0000039016839017B6B6B603A00683A009FFDB9083A00ADB903A83A00B903A0003A00C83A00D00006603A00E83A00FB6FFFF03A01503A01683B005FFFFDB03B00683B007FFB66683B008B6660083B0093A000083B00A00003A83B00B003A9083B00C3A90DB83B00DB6FFFF03B00E03B01583B0160066B683C002FFFFB683C003FFDB9083C004DB903A83C005903A0003C00603C00783C008003A9083C0093A90DB83C00A90DBFF83C00BDBFFFF03C00E03C01583D000DB906683D001B6660083D00266000083D0033A000003D00483D00500006603D00683D00766B6FF83D008DBFFFF03D00E03D01583E00090DBFF03E00183E00200003A83E0030066B683E00466B6FF83E005B6FFFF03E00683E009DB903A83E00ADB903A83E00BFFB66683E00CFFB66683E00DFFB66603E00E83E00FFFB66683E010FFB66683E011FFB66683E012FFB66683E013FFB66683E014FFB66603E01583E016FFB66683E017FFB66683E018FFB66683E019DB903A83E01ADB903A83E01BDB903A83E01CDB903A83E01DDB903A83F001003A9083F00290DBFF03F00683F009003A9003F00A03F00B03F00C03F00D03F00E03F00F03F01003F01103F01203F01303F01403F01503F01603F01703F01803F01903F01A03F01B03F01C03F01D840001DBFFFF040006840009DBFFFF84000A00006684000B66B6FF84000C66B6FF84000D66B6FF04000E84000F66B6FF84001066B6FF84001166B6FF84001266B6FF84001366B6FF04001484001566B6FF84001666B6FF84001766B6FF84001866B6FF84001966B6FF84001A66B6FF84001B66B6FF84001C66B6FF84001D66B6FF841005FFDB9004100684100AB6FFFF84100CFFDB9084100DDB903A04100E041014842004FFDBDB8420053A000004200684200BDB903A84200C6690DB84200D003A9004200E042014843004DBFFFF84300500006604300684300AFFDB9084300B003A9084300DDBFFFF84300E003A908430140066B6844005B6FFFF844006003A90844009FFDB9084400A3A003A84400BDBFFFF84400CB6909084400DDB903A84400EB6903A84400FDB903A844010DB903A844011DB903A844012DB903A844013DB903A844014DB903A844015DB903A844016DB903A844017DB903A844018DB903A844019DB903A84401ADB903A84401BDB903A84401CDB903A84401DDB903A845006DBFFFF845008FFDB908450093A000084500A90DBFF84500CDBFFFF04500D84500E00006684500F00006684501000006604501184501200006684501300006684501400006684501500006604501684501700006684501800006684501900006684501A00006684501B00006684501C00006684501D000066846007FFB6668460083A00008460093A90DB04600D84600EB6FFFF84600FB6FFFF846010B6FFFF046011846012B6FFFF846013B6FFFF846014B6FFFF846015B6FFFF046016846017B6FFFF846018B6FFFF846019B6FFFF84601AB6FFFF84601BB6FFFF84601CB6FFFF84601DB6FFFF847005FFFFDB847006DB903A0470078470083A90DB847009B6660004700D04701104701684701CB66600848004FFDB90848005903A000480068480073A90DB04800904800D04801104801604801C849002FFFFB6849003B666008490043A000084900500003A84900666B6FF04900904900D84900EFFFFB684900FFFFFB6849010FFFFB6049011849012FFFFB6849013FFFFB6849014FFFFB6849015FFFFB6049016849017FFFFB6849018FFFFB6849019FFFFB684901AFFFFB684901BFFFFB604901C84901DB6660084A000FFDB9084A001DB903A84A00266000004A00384A004003A9084A00590DBFF04A00984A00CB6660004A00D84A00E66000084A00F66000084A01066000004A01184A01266000084A01366000084A01466000084A01566000004A01684A01766000084A01866000084A01966000084A01A66000084A01B66000004A01C84A01D00006684B0003A000004B00104B00284B0033A90DB84B004DBFFFF04B00984B00C66B6FF04B00D84B00E0066B684B00F0066B684B0100066B684B0110066B684B0120066B684B0130066B684B0140066B684B0150066B684B0160066B684B0170066B684B0180066B684B0190066B684B01A0066B684B01B0066B684B01C3A90DB84B01DB6FFFF84C00066B6FF04C00184C00200006684C003FFB66604C00984C00D3A90DB84D0013A90DB84D002B6FFFF84D0030066B684D004B6660084D005FFFFB604D00984D00DFFFFDB84D018FFFFDB84E0043A90DB84E00566000084E006FFB66684E008DB903A04E00984E00DDBDBFF84E00EB6660084E00FB6660084E010B6660084E011B6660084E012B6660084E013B6660084E014B6660084E015B6660084E016B6660084E017B6660084E018903A0084E01BB6660084F00566B6FF04F00684F007DB903A84F0080066B604F00984F00E00003A84F00F003A6684F010003A9084F011003A9084F012003A9084F013003A9084F014003A9084F015003A9084F016003A9084F017003A9084F0180066B604F01B8500063A90DB050007850008DB903A8500090066B685000AFFDBDB85000E90DBFF85000F90B6DB850010DBFFFF850011DBFFFF850012DBFFFF850013DBFFFF850014DBFFFF850015DBFFFF850016DBFFFF850017DBFFFF85001B003A9085001CB66600851007003A90051008851009DB903A85100ADBFFFF85101BDBDB9005101C85101DDB903A852007DBFFFF05200805200985200AFFDB9085200CDB906685200DDB903A85200EDB903A85200FFFB666852010FFB666852011FFB666852012FFB666852013FFB666852014FFB666852015FFB666852016FFB666852017FFB666852018FFB666852019FFB66685201AFFB66685201B3A000005201C85201D00003A8530080066B605300985300A3A000085300C90DBFF05300D85300E00003A85300F00003A85301000003A85301100003A85301200003A85301300003A85301400003A85301500003A85301600003A85301700003A85301800003A85301900003A85301A00003A85301B00003A85301C00006685301D90DBFF05400985400A00006685400D003A9085400E90DBFF85400F90DBFF85401090DBFF85401190DBFF85401290DBFF85401390DBFF85401490DBFF85401590DBFF85401690DBFF85401790DBFF85401890DBFF85401990DBFF85401A90DBFF85401B90DBFF85401CB6FFFF05500985500AB6FFFF85500DDBFFFF8560090066B685901CB6660085A01BFFB66685A01C0066B685B01AFFDB9085B01B003A9085C019FFDB9085C01A3A000085C01BDBFFFF85D018FFDB9085D0193A000085D01A66B6FF85E017FFDB9085E0183A000085E0193A90DB85F016FFB66685F0173A000085F0180066B6860015DB903A0600168600170066B6861002DB903A861013FFFFB6861014B666000610158610160066B6862001B66600062002862012FFB6668620136600000620148620153A90DB86300166B6FF063002863010FFDB90863011B6660006301286301300006686301466B6FF064002864003B6660086400DFFFFDB86400EFFDB9086400FB666008640103A00000640118640120066B6864013B6FFFF8650023A90DB065003865004FFFFB686500BFFFFB686500CFFB66686500D903A0086500E3A000006500F865010003A9086501166B6FF86600300003A866004660000866005FFFFB6866007FFFFDB866008FFDB90866009FFB66686600AB6660086600B66000006600C06600D86600E003A9086600F66B6FF866010DBFFFF86700390DBFF86700400003A867005660000867006B66600867007903A008670083A000006700906700A86700B00003A86700C0066B686700D66B6FF86700EDBFFFF86800490DBFF8680050066B686800600003A06800706800806800986800A3A909086800B90DBFF86900690DBFF8690073A90DB869008003A9086900900003A86900A66000086900BB6660086900CFFB66686900DFFFFB686A008DBFFFF86A00990DBFF86A00A3A90DB86A00B003A9086A00C00003A86A00D66000086A00EB6660086A00FFFB66686A010FFFFDB86B00BDBFFFF86B00C90DBFF86B00D0066B686B00E00003A06B00F86B010903A0086B011FFB66686B012FFFFDB86C00E90DBFF86C00F0066B686C01000003A06C01186C012903A0086C013FFB66686D01090DBFF86D011003A9006D01206D01386D014B6660086D015FFFFB686E011DBFFFF86E0123A90DB86E01300003A06E01486E01566000086E016FFB66686F01390DBFF86F01400006606F01506F01686F017DB903A870014B6FFFF870015003A90070016070017870018B66600871015DBFFFF871016003A90071017071018871019B66600872016DBFFFF87201700006607201807201987201AB66600873017B6FFFF07301807301907301A87301BDB903A8740183A90DB07401907401A87401B0066B607501907501A8760193A90DB87601A3A3A3A87701A66B6FF87B004FFDB9087B005FFDB9087B006FFFFB687B007FFFFB687B008FFFFB687B009FFFFB687B00AFFFFB687B00BFFFFB687B00CFFFFB687B00DFFFFB687B00EFFFFB687B00FFFFFB687B010FFFFB687B011FFFFB687B012FFFFB687B013FFFFB687B014FFFFB687B015FFFFB687B016FFFFB687B017FFDB9087B018FFDB9087B019FFDB9087B01AFFDB9087C0043A000087C0053A000087C00666000087C00766000087C00866000087C00966000087C00A66000087C00B66000087C00C66000087C00D66000087C00E66000087C00F66000087C01066000087C01166000087C01266000087C01366000087C01466000087C01566000087C01666000087C0173A000087C0183A000087C0193A000087C01A6690DB87D00466B6FF07D00587D006003A9087D007003A9087D008003A9087D009003A9087D00A003A9087D00B003A9087D00C003A9007D00D87D00E003A9087D00F003A9087D010003A9087D011003A9087D012003A9087D013003A9087D014003A9087D015003A9007D01687D017003A9087D018003A9087D019003A9007E00587E006DBFFFF87E007DBFFFF87E008DBFFFF87E009DBFFFF87E00ADBFFFF87E00BDBFFFF87E00CDBFFFF07E00D87E00EDBFFFF87E00FDBFFFF87E010DBFFFF87E011DBFFFF87E012DBFFFF87E013DBFFFF87E014DBFFFF87E015DBFFFF07E01687E017DBFFFF87E018DBFFFF87E019DBFFFF07F00507F00D07F01608000508000D08001608100508100D081016882004FFFFB6082005882006FFFFB6882007FFFFB6882008FFFFB6882009FFFFB688200AFFFFB688200BFFFFB688200CFFFFB608200D88200EFFFFB688200FFFFFB6882010FFFFB6882011FFFFB6882012FFFFB6882013FFFFB6882014FFFFB6882015FFFFB6082016882017FFFFB6882018FFFFB6882019FFFFB688300466000008300588300666000088300766000088300866000088300966000088300A66000088300B66000088300C66000008300D88300E66000088300F6600008830106600008830116600008830126600008830136600008830146600008830156600000830168830176600008830186600008830199090DB884004000066084005884006003A90884007003A90884008003A90884009003A9088400A003A9088400B003A9088400C003A9088400D003A9088400E003A9088400F003A90884010003A90884011003A90884012003A90884013003A90884014003A90884015003A90884016003A90884017000066884018000066885004B6FFFF8850050066B6885006DBFFFF885007DBFFFF885008906600885009DBFFFF88500ADBFFFF88500BDBFFFF88500CDBFFFF88500DDBFFFF88500EDBFFFF88500FDBFFFF885010DBFFFF885011DBFFFF885012DBFFFF885013DBFFFF885014DBFFFF885015DBFFFF885016DBFFFF885017B6FFFF885018B6FFFF086008886009B69090087008887009DBFFFF88700CFFDBDB88700DFFDB9008800888800CDBFFFF88800D3A000088800EFFB66688800FFFFFDB08900888900D66B6FF08900E88900F903A00889010FFB666889011FFFFB608A00888A00E3A90DB08A00F08A01088A01166000088A012B6660088A01BFFFFB608B00888B00F0066B688B01000003A88B01100003A88B012003A9088B01B66000008C00888C01090DBFF88C01190DBFF88C012DBFFFF08C01B08D00808D01B08E00808E01B88E01CB6660088E01DFFFFB688F000FFFFDB88F001FFFFDB88F002FFFFDB88F003FFFFDB88F004FFFFDB88F005FFFFDB88F006FFFFDB88F007FFFFDB08F00888F009FFFFDB88F00AFFFFDB88F00BFFFFDB88F00CFFFFDB88F00DFFFFDB88F00EFFFFDB88F00FFFFFDB88F010FFFFDB88F011FFFFDB88F012FFFFDB88F013FFFFDB88F014FFFFDB88F015FFFFDB88F016FFFFDB88F017FFFFDB88F018FFFFDB88F019FFFFDB88F01AFFFFB608F01B08F01C88F01D66003A890000903A66890001903A00890002903A00890003903A00890004903A00890005903A00890006903A00890007903A00090008890009903A0089000A903A0089000B903A0089000C903A0089000D903A0089000E903A0089000F903A00890010903A00890011903A00890012903A00890013903A00890014903A00890015903A00890016903A00890017903A00890018903A00890019903A0089001A66000009001B09001C89001D90DBFF891000B6FFFF09100189100200003A89100300006689100400006689100500006689100600006689100700006609100889100900006689100A00006689100B00006689100C00006689100D00006689100E00006689100F00006689101000006689101100006689101200006689101300006689101400006689101500006689101600006689101700006689101800006689101900006689101A00006689101B003A9089101C66B6FF892001003A9089200290B6B6892003B6FFFF892004B6FFFF892005B6FFFF892006B6FFFF892007B6FFFF092008892009B6FFFF89200AB6FFFF89200BB6FFFF89200CB6FFFF89200DB6FFFF89200EB6FFFF89200FB6FFFF892010B6FFFF892011B6FFFF892012B6FFFF892013B6FFFF892014B6FFFF892015B6FFFF892016B6FFFF892017B6FFFF892018B6FFFF892019B6FFFF89201AB6FFFF89201BDBFFFF893001DBFFFF893002B6DBFF093008894007FFDB900940088950073A000009500889600766B6FF09600889700866B6FF897009B69090898009DBFFFF89D004FFDB9089D005FFFFB689D006FFFFB689D007FFFFB689D008FFFFB689D009FFFFB689D00AFFFFB689D00BFFFFB689D00CFFFFB689D00DFFFFB689D00EFFFFB689D00FFFFFB689D010FFFFB689D011FFFFB689D012FFFFB689D013FFFFB689D014FFFFB689D015FFFFB689D016FFFFB689D017FFFFB689D018FFFFB689D019FFFFB689D01AFFFFB689D01BFFFFB689D01CFFFFB689D01DFFDB9089E0046690DB89E00566000089E00666000089E00766000089E00866000089E00966000089E00A66000089E00B66000089E00C66000089E00D66000089E00E66000089E00F66000089E01066000089E01166000089E01266000089E01366000089E01466000089E01566000089E01666000089E01766000089E01866000089E01966000089E01A66000089E01B66000089E01C66000089E01D6690DB09F00589F006003A9089F007003A9089F008003A9089F009003A9089F00A003A9089F00B003A9089F00C003A9089F00D003A9089F00E003A9089F00F003A9089F010003A9089F011003A9089F012003A9089F013003A9089F014003A9089F015003A9089F016003A9089F017003A9089F018003A9089F019003A9089F01A003A9089F01B003A9089F01C003A908A0000B666668A0001FFDB908A00053A90DB8A0006B6B6B68A0007DBFFFF8A0008DBFFFF8A0009DBFFFF8A000ADBFFFF8A000BDBFFFF8A000CDBFFFF8A000DDBFFFF8A000EDBFFFF8A000FDBFFFF8A0010DBFFFF8A0011DBFFFF8A0012DBFFFF8A0013DBFFFF8A0014DBFFFF8A0015DBFFFF8A0016DBFFFF8A0017DBFFFF8A0018DBFFFF8A0019DBFFFF8A001ADBFFFF8A001BDBFFFF8A001CDBFFFF8A1000B6FFFF8A10013A00008A1002DB903A8A1003FFFFB68A1006DBFFFF8A20013A90DB0A20028A20036600008A2004B666008A2005FFB6668A30020066B60A30030A30048A300500003A8A400366B6FF8A40043A90DB8A400590DBFF8A4008FFFFDB8A4009FFFFDB8A400AFFFFDB8A400BFFFFDB8A400CFFFFDB8A400DFFFFDB8A400EFFFFDB8A400FFFFFDB8A4010FFFFDB8A4011FFFFDB8A4012FFFFDB8A4013FFFFDB8A4014FFFFDB8A4015FFFFDB8A4016FFFFDB8A4017FFFFDB8A50089066908A5009903A008A500A903A008A500B903A008A500C903A008A500D903A008A500E903A008A500F903A008A5010903A008A5011903A008A5012903A008A5013903A008A5014903A008A5015903A008A5016903A008A5017903A008A6003DB903A8A6008DBFFFF0A60098A600A003A908A600B003A908A600C003A908A600D003A908A600E003A900A600F8A6010003A908A6011003A908A6012003A908A6013003A908A6014003A900A60158A6016003A908A60170066B60A70030A70098A700ADBFFFF8A700BDBFFFF8A700CDBFFFF8A700DDBFFFF8A700EDBFFFF0A700F8A7010DBFFFF8A7011DBFFFF8A7012DBFFFF8A7013DBFFFF8A7014DBFFFF0A70158A7016DBFFFF0A80030A80090A800F0A80150A90030A90090A900F0A90150AA0030AA0090AA00F0AA0150AB0030AB0090AB00F0AB0150AC0030AC0090AC00F0AC0150AD0038AD008FFFFB60AD0098AD00AFFB6668AD00BFFB6668AD00CFFB6668AD00DFFB6668AD00EFFB6660AD00F8AD010FFB6668AD011FFB6668AD012FFB6668AD013FFB6668AD014FFB6660AD0158AD016FFB6668AD017FFB6660AE0038AE00866003A0AE0090AE00A0AE00B0AE00C0AE00D0AE00E0AE00F0AE0100AE0110AE0120AE0130AE0140AE0150AE0168AE0173A90DB0AF0038AF00890DBFF8AF00900003A8AF00A66B6FF8AF00B66B6FF8AF00C66B6FF8AF00D66B6FF8AF00E66B6FF8AF00F66B6FF8AF01066B6FF8AF01166B6FF8AF01266B6FF8AF01366B6FF8AF01466B6FF8AF01566B6FF8AF01666B6FF8AF01AFFDB900B00038B000990DBFF8B001A3A66B68B001BFFB6660B10030B101B0B20030B201B8B201CFFDB900B30030B301B8B301C3A00008B301DFFB6660B40038B4004FFFFB68B4005FFFFB68B4006FFFFB68B4007FFFFB68B4008FFFFB68B4009FFFFB68B400AFFFFB68B400BFFFFB68B400CFFFFB68B400DFFFFB68B400EFFFFB68B400FFFFFB68B4010FFFFB68B4011FFFFB68B4012FFFFB68B4013FFFFB68B4014FFFFB68B4015FFFFB68B4016FFFFB68B4017FFFFB68B4018FFFFB68B4019FFFFB68B401AFFDB900B401B0B401C8B401D3A90DB8B5002DB903A0B50038B50046600008B50056600008B50066600008B50076600008B50086600008B50096600008B500A6600008B500B6600008B500C6600008B500D6600008B500E6600008B500F6600008B50106600008B50116600008B50126600008B50136600008B50146600008B50156600008B50166600008B50176600008B50186600008B50196600008B501A3A00000B501B8B501C0000668B60023A90DB0B60038B6004003A908B6005003A908B6006003A908B6007003A908B6008003A908B6009003A908B600A003A908B600B003A908B600C003A908B600D003A908B600E003A908B600F003A908B6010003A908B6011003A908B6012003A908B6013003A908B6014003A908B6015003A908B6016003A908B6017003A908B6018003A908B6019003A908B601A0066B68B601B3A90DB8B601CB6FFFF8B70033A90DB8B7004B6DBDB8B7005DBFFFF8B7006DBFFFF8B7007DBFFFF8B7008DBFFFF8B7009DBFFFF8B700ADBFFFF8B700BDBFFFF8B700CDBFFFF8B700DDBFFFF8B700EDBFFFF8B700FDBFFFF8B7010DBFFFF8B7011DBFFFF8B7012DBFFFF8B7013DBFFFF8B7014DBFFFF8B7015DBFFFF8B7016DBFFFF8B7017DBFFFF8B7018DBFFFF8B7019DBFFFF"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="16" value="请输入时间"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname1" type="string" length="7" value="SimSun"/>
+   <property name="pointsize1" type="long" value="9"/>
+   <property name="fontweight1" type="long" value="400"/>
+   <property name="fontitalic1" type="uchar" value="0"/>
+   <property name="fontunderline1" type="uchar" value="0"/>
+   <property name="fontstrikeout1" type="uchar" value="0"/>
+   <property name="bitmap1" type="string" length="1" value=""/>
+   <property name="color1" type="ulong" value="0"/>
+   <property name="text1" type="string" length="1" value=""/>
+   <property name="align1" type="ulong" value="1"/>
+   <property name="fontname2" type="string" length="7" value="SimSun"/>
+   <property name="pointsize2" type="long" value="9"/>
+   <property name="fontweight2" type="long" value="400"/>
+   <property name="fontitalic2" type="uchar" value="0"/>
+   <property name="fontunderline2" type="uchar" value="0"/>
+   <property name="fontstrikeout2" type="uchar" value="0"/>
+   <property name="bitmap2" type="string" length="1" value=""/>
+   <property name="color2" type="ulong" value="0"/>
+   <property name="text2" type="string" length="1" value=""/>
+   <property name="align2" type="ulong" value="1"/>
+   <property name="fontname3" type="string" length="7" value="SimSun"/>
+   <property name="pointsize3" type="long" value="9"/>
+   <property name="fontweight3" type="long" value="400"/>
+   <property name="fontitalic3" type="uchar" value="0"/>
+   <property name="fontunderline3" type="uchar" value="0"/>
+   <property name="fontstrikeout3" type="uchar" value="0"/>
+   <property name="bitmap3" type="string" length="1" value=""/>
+   <property name="color3" type="ulong" value="0"/>
+   <property name="text3" type="string" length="1" value=""/>
+   <property name="align3" type="ulong" value="1"/>
+   <property name="fontname4" type="string" length="7" value="SimSun"/>
+   <property name="pointsize4" type="long" value="9"/>
+   <property name="fontweight4" type="long" value="400"/>
+   <property name="fontitalic4" type="uchar" value="0"/>
+   <property name="fontunderline4" type="uchar" value="0"/>
+   <property name="fontstrikeout4" type="uchar" value="0"/>
+   <property name="bitmap4" type="string" length="1" value=""/>
+   <property name="color4" type="ulong" value="0"/>
+   <property name="text4" type="string" length="1" value=""/>
+   <property name="align4" type="ulong" value="1"/>
+   <property name="fontname5" type="string" length="7" value="SimSun"/>
+   <property name="pointsize5" type="long" value="9"/>
+   <property name="fontweight5" type="long" value="400"/>
+   <property name="fontitalic5" type="uchar" value="0"/>
+   <property name="fontunderline5" type="uchar" value="0"/>
+   <property name="fontstrikeout5" type="uchar" value="0"/>
+   <property name="bitmap5" type="string" length="1" value=""/>
+   <property name="color5" type="ulong" value="0"/>
+   <property name="text5" type="string" length="1" value=""/>
+   <property name="align5" type="ulong" value="1"/>
+   <property name="fontname6" type="string" length="7" value="SimSun"/>
+   <property name="pointsize6" type="long" value="9"/>
+   <property name="fontweight6" type="long" value="400"/>
+   <property name="fontitalic6" type="uchar" value="0"/>
+   <property name="fontunderline6" type="uchar" value="0"/>
+   <property name="fontstrikeout6" type="uchar" value="0"/>
+   <property name="bitmap6" type="string" length="1" value=""/>
+   <property name="color6" type="ulong" value="0"/>
+   <property name="text6" type="string" length="1" value=""/>
+   <property name="align6" type="ulong" value="1"/>
+   <property name="fontname7" type="string" length="7" value="SimSun"/>
+   <property name="pointsize7" type="long" value="9"/>
+   <property name="fontweight7" type="long" value="400"/>
+   <property name="fontitalic7" type="uchar" value="0"/>
+   <property name="fontunderline7" type="uchar" value="0"/>
+   <property name="fontstrikeout7" type="uchar" value="0"/>
+   <property name="bitmap7" type="string" length="1" value=""/>
+   <property name="color7" type="ulong" value="0"/>
+   <property name="text7" type="string" length="1" value=""/>
+   <property name="align7" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="picture" class="picture">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="430"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="filename" type="string" length="32" value="desk0.jpg"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="transparentcolor" type="ulong" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="1" value=""/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[$picture_ctrl.set_year = $system.Year;
+$picture_ctrl.set_month = $system.Month;
+$picture_ctrl.set_day = $system.Day;
+$picture_ctrl.set_hour = $system.Hour;
+$picture_ctrl.set_min = $system.Minute;
+$picture_ctrl.set_sec = $system.Second;
+]]></event>
+  </events>
+ </widget>
+</hmiwidget>

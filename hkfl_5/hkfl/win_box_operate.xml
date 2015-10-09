@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="timer" class="timer">
+  <properties>
+   <property name="left" type="short" value="65"/>
+   <property name="top" type="short" value="420"/>
+   <property name="right" type="short" value="164"/>
+   <property name="bottom" type="short" value="451"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="interval" type="ulong" value="2000"/>
+   <property name="enableinwindow" type="uchar" value="0"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="enable" expression="$sys_set.open_all_box_flag"/>
+  </dynamics>
+  <events>
+   <event name="timer"><![CDATA[BOX_MSG box_info;
+static int index = 0;
+
+if(1 == $ARM_info.back_comm || index == 0)
+{
+    index++;
+    if(1 == read_box_info_station_num(index , &box_info))
+    {
+    $ARM_info.station_num = box_info.station_num;
+    $ARM_info.station_port = box_info.station_port;
+    $ARM_info.send_comm = 1;//发送开箱指令
+    $ARM_info.back_comm = 0;//将返回指令置0
+    memset($picture_ctrl.open_box_tip,0,30);
+    memcpy($picture_ctrl.open_box_tip , box_info.virtualnumber,VIRTUAL_NUM_LENGTH);
+    strcat($picture_ctrl.open_box_tip ,"号箱门已开");
+    $$HmiCommit;
+    hmi_window_show("win_box_tip"); 
+    }
+    if(index == $sys_set.box_num)
+    {
+        $sys_set.open_all_box_flag = 0;
+        index = 0;
+    }
+}
+
+
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_9" class="button">
+  <properties>
+   <property name="left" type="short" value="655"/>
+   <property name="top" type="short" value="375"/>
+   <property name="right" type="short" value="780"/>
+   <property name="bottom" type="short" value="425"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="返回"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_box_operate");]]></event>
+  </events>
+ </widget>
+ <widget name="button_8" class="button">
+  <properties>
+   <property name="left" type="short" value="95"/>
+   <property name="top" type="short" value="310"/>
+   <property name="right" type="short" value="350"/>
+   <property name="bottom" type="short" value="360"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="解锁指定箱格"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+text_input_window("box_msg.virtualnumber","请输入箱号",0);
+if(1 == read_box_info_virtualnumber($box_msg.virtualnumber , &box_info))
+{
+    box_info.status = BOX_IDLE;
+    write_box_info(&box_info);
+    strcpy($picture_ctrl.win_tip , $box_msg.virtualnumber);
+    strcat($picture_ctrl.win_tip , "箱号已解锁");
+}
+else
+{
+   strcpy($picture_ctrl.win_tip , "箱号输入错误，请重新输入");
+}
+    $$HmiCommit;
+    hmi_window_show("win_tip"); 
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_7" class="button">
+  <properties>
+   <property name="left" type="short" value="440"/>
+   <property name="top" type="short" value="310"/>
+   <property name="right" type="short" value="695"/>
+   <property name="bottom" type="short" value="360"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="解锁所有箱格"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+int index;
+strcpy($picture_ctrl.win_tip , "所有箱格解锁成功");
+for(index = 1;index <= $sys_set.box_num;index++)
+{
+if(1 == read_box_info_station_num(index , &box_info))
+{
+    box_info.status = BOX_IDLE;
+    write_box_info(&box_info);
+}
+else
+{
+   strcpy($picture_ctrl.win_tip , "设置异常");
+}
+}
+    $$HmiCommit;
+    hmi_window_show("win_tip"); 
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_6" class="button">
+  <properties>
+   <property name="left" type="short" value="440"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="695"/>
+   <property name="bottom" type="short" value="110"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="打开所有箱格"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[$sys_set.open_all_box_flag = 1;
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_5" class="button">
+  <properties>
+   <property name="left" type="short" value="95"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="350"/>
+   <property name="bottom" type="short" value="235"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="锁定指定箱格"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+text_input_window("box_msg.virtualnumber","请输入箱号",0);
+if(1 == read_box_info_virtualnumber($box_msg.virtualnumber , &box_info))
+{
+    box_info.status = BOX_LOCK;
+    write_box_info(&box_info);
+    strcpy($picture_ctrl.win_tip , $box_msg.virtualnumber);
+    strcat($picture_ctrl.win_tip , "箱号已锁定");
+}
+else
+{
+   strcpy($picture_ctrl.win_tip , "箱号输入错误，请重新输入");
+}
+    $$HmiCommit;
+    hmi_window_show("win_tip"); 
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_4" class="button">
+  <properties>
+   <property name="left" type="short" value="440"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="695"/>
+   <property name="bottom" type="short" value="235"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="锁定所有箱格"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+int index;
+strcpy($picture_ctrl.win_tip , "所有箱格锁定成功");
+for(index = 1;index <= $sys_set.box_num;index++)
+{
+if(1 == read_box_info_station_num(index , &box_info))
+{
+    box_info.status = BOX_LOCK;
+    write_box_info(&box_info);
+}
+else
+{
+   strcpy($picture_ctrl.win_tip , "设置异常");
+}
+}
+    $$HmiCommit;
+    hmi_window_show("win_tip"); 
+]]></event>
+  </events>
+ </widget>
+ <widget name="button_3" class="button">
+  <properties>
+   <property name="left" type="short" value="95"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="350"/>
+   <property name="bottom" type="short" value="110"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="打开指定箱格"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+text_input_window("box_msg.virtualnumber","请输入箱号",0);
+if(1 == read_box_info_virtualnumber($box_msg.virtualnumber , &box_info))
+{
+    $ARM_info.station_num = box_info.station_num;
+    $ARM_info.station_port = box_info.station_port;
+    $ARM_info.send_comm = 1;//发送开箱指令
+    $ARM_info.back_comm = 0;//将返回指令置0
+    memset($picture_ctrl.open_box_tip,0,30);
+    memcpy($picture_ctrl.open_box_tip , $box_msg.virtualnumber,VIRTUAL_NUM_LENGTH);
+    strcat($picture_ctrl.open_box_tip ,"号箱门已开");
+    $$HmiCommit;
+    hmi_window_show("win_box_tip");    
+}
+else
+{
+   strcpy($picture_ctrl.win_tip , "箱号输入错误，请重新输入");
+    $$HmiCommit;
+    hmi_window_show("win_tip"); 
+}]]></event>
+  </events>
+ </widget>
+ <widget name="picture" class="picture">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="430"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="filename" type="string" length="32" value="desk0.jpg"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="transparentcolor" type="ulong" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="1" value=""/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+</hmiwidget>

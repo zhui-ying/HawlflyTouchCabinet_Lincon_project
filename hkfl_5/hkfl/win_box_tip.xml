@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="timer" class="timer">
+  <properties>
+   <property name="left" type="short" value="30"/>
+   <property name="top" type="short" value="150"/>
+   <property name="right" type="short" value="129"/>
+   <property name="bottom" type="short" value="181"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="interval" type="ulong" value="1000"/>
+   <property name="enableinwindow" type="uchar" value="1"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="timer"><![CDATA[//定时器计时，当等待开箱时间过长，弹出再次开箱窗口
+if(0 == $ARM_info.back_comm)
+{
+    $sys_set.box_open_count++;
+}else
+{
+    $picture_ctrl.open_box_delay++;
+}
+if($sys_set.box_open_count == 3)//3s超时
+{
+    hmi_window_hide("win_box_tip");
+    strcpy($picture_ctrl.win_tip,"开箱失败");
+    $$HmiCommit;
+    hmi_window_show("win_tip");      
+}
+if($picture_ctrl.open_box_delay == 3)
+{
+    hmi_window_hide("win_box_tip");
+    if(1 == $picture_ctrl.win_save_next_flag)
+    {
+    //继续存物窗口
+     $picture_ctrl.win_save_next_flag = 0;
+     hmi_window_show("win_save_pack_next_tip");
+    }
+}
+]]></event>
+  </events>
+ </widget>
+ <widget name="button" class="button">
+  <properties>
+   <property name="left" type="short" value="145"/>
+   <property name="top" type="short" value="115"/>
+   <property name="right" type="short" value="270"/>
+   <property name="bottom" type="short" value="160"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="确定"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="visible" expression="$ARM_info.back_comm"/>
+   <dynamic propname="enable" expression="$ARM_info.back_comm"/>
+  </dynamics>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_box_tip");
+if(1 == $picture_ctrl.win_save_next_flag)
+{
+    //继续存物窗口
+    $picture_ctrl.win_save_next_flag = 0;
+    hmi_window_show("win_save_pack_next_tip");
+}
+]]></event>
+  </events>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="-5"/>
+   <property name="top" type="short" value="25"/>
+   <property name="right" type="short" value="400"/>
+   <property name="bottom" type="short" value="56"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="code" type="script">
+    <code><![CDATA[if(1 == $ARM_info.back_comm)
+{
+    return $picture_ctrl.open_box_tip;
+}
+else
+{
+    return $picture_ctrl.open_box_wait;
+}]]></code>
+   </dynamic>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="200"/>
+   <property name="top" type="short" value="100"/>
+   <property name="right" type="short" value="600"/>
+   <property name="bottom" type="short" value="300"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="10" value="desk1.jpg"/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[$sys_set.box_open_count = 0;
+$picture_ctrl.open_box_delay = 0;]]></event>
+  </events>
+ </widget>
+</hmiwidget>

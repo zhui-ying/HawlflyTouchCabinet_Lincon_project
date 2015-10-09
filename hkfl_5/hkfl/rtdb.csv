@@ -1,0 +1,3 @@
+dataBaseName,dataGroupName,dataName,type,lenth,init,description
+picture_ctrl,,logo_ctrl,uchar,1,1,
+picture_ctrl,,main_tip,string,40,"请刷卡或触摸""取件""开箱",

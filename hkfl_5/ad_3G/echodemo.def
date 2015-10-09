@@ -1,0 +1,9 @@
+; echodemo.def : Declares the module parameters for the DLL.
+
+LIBRARY      echodemo
+DESCRIPTION  'echodemo Windows Dynamic Link Library'
+
+EXPORTS
+
+	module_init
+	module_exit

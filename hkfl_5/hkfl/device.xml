@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <link name="ARMlink" period="20" status_var="" control_var="" enable="1" redundtype="master" masterlink="ARMlink" timeout="3000" deviceinterval="50" linktimeoutcount="50" params="" driver="serial" devname="COM2" baudrate="57600" data_bits="8" parity="0" stop_bits="1">
+        <device name="ARM_RTU" address="1" driver="modbus_rtu" manufacturer="" product="" params="" status_var="" control_var="" digit_max_count="64" analog_max_count="25" packetinterval="0" enable="1">
+            <data type="AO" address="0" dataname="ARM_info.station_num" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="1" dataname="ARM_info.station_port" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="2" dataname="ARM_info.send_comm" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="3" dataname="ARM_info.back_comm" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="4" dataname="ARM_info.send_id0" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="5" dataname="ARM_info.send_id1" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="6" dataname="ARM_info.send_id2" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="7" dataname="ARM_info.send_id3" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="8" dataname="ARM_info.send_id4" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="9" dataname="ARM_info.send_id5" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="10" dataname="ARM_info.send_id6" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="11" dataname="ARM_info.send_id7" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="12" dataname="ARM_info.send_id8" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="13" dataname="ARM_info.send_id9" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="14" dataname="ARM_info.send_id10" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="15" dataname="ARM_info.send_id11" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="16" dataname="ARM_info.user_id0" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="17" dataname="ARM_info.user_id1" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="18" dataname="ARM_info.send_id_flag" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+            <data type="AO" address="19" dataname="ARM_info.user_id_flag" status_var="" group="0" mode="hmireadwrite" asyn_write="1" fast_read="0" enable="1" data_convert="none">
+                <data_convert/>
+            </data>
+        </device>
+    </link>
+</devices>

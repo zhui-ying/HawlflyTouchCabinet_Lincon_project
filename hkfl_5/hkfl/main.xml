@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="text_3" class="text">
+  <properties>
+   <property name="left" type="short" value="255"/>
+   <property name="top" type="short" value="360"/>
+   <property name="right" type="short" value="550"/>
+   <property name="bottom" type="short" value="385"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="datetime2str($system.CurDateTime)"/>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="IC_check" class="DigitScriptControl">
+  <properties>
+   <property name="left" type="short" value="165"/>
+   <property name="top" type="short" value="325"/>
+   <property name="right" type="short" value="264"/>
+   <property name="bottom" type="short" value="356"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="triggervar" type="string" length="22" value="ARM_info.user_id_flag"/>
+   <property name="triggercontrol" type="ulong" value="2"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="script"><![CDATA[unsigned char IC_buf[12];
+unsigned long IC_data;//设定一个32位的数
+int i;
+$system.IsMouseDown = 1;
+hmi_window_hide("win_ad");//隐藏广告窗口
+IC_buf[0] = $ARM_info.user_id0>>8;
+IC_buf[1] = $ARM_info.user_id0%256;
+IC_buf[2] = $ARM_info.user_id1>>8;
+IC_buf[3] = $ARM_info.user_id1%256;
+
+IC_data = (unsigned long)IC_buf[0]*16777216 + (unsigned long)IC_buf[1]*65536 + (unsigned long)IC_buf[2]*256 + (unsigned long)IC_buf[3];
+debug_printf("IC_data = %ld\n",IC_data);
+debug_printf("IC_buf = %d %d %d %d\n",IC_buf[0] , IC_buf[1] , IC_buf[2] , IC_buf[3]);
+memset(IC_buf , 0 , 12);//清空buf，方便装入ASCII值
+for(i=0;i<10;i++)
+{
+    IC_buf[9-i] = IC_data%10 + '0';
+    IC_data = IC_data/10;
+}
+debug_printf("recv IC OK\n");
+debug_printf(IC_buf);
+debug_printf("\n");
+if($sys_set.user_ic_enable_flag == 1)//用户IC
+{
+    BOX_MSG box_info;
+    int data_len;
+    unsigned char data_buf[sizeof(USER_INFO)];
+    memcpy($box_msg.user_id , IC_buf , USERID_LENGTH);//将ID卡号复制到用户ID信息中
+    if(1 == read_box_info_user_id($box_msg.user_id , &box_info))
+    {
+    //密码正确，执行开箱操作，同时发送数据给服务器
+    //write_box_info(&box_info);
+    HISTORY_MSG history_info;
+    memcpy((char *)&history_info.box_info , (char *)&box_info , sizeof(BOX_MSG));//复制信息到历史记录中
+    history_info.box_info.status = BOX_IDLE;//为防止记录与GPRS协议冲突，这里一律认为用户存物
+    history_info.data_time = $system.CurDateTime;//记录时间
+    write_history_info(&history_info);
+
+    $ARM_info.station_num = box_info.station_num;
+    $ARM_info.station_port = box_info.station_port;
+    $ARM_info.back_comm = 0;
+    $ARM_info.send_comm = 1;
+    memset($picture_ctrl.open_box_tip,0,30);
+    memcpy($picture_ctrl.open_box_tip , box_info.virtualnumber,VIRTUAL_NUM_LENGTH);
+    strcat($picture_ctrl.open_box_tip ,"号箱门已开");
+    $$HmiCommit;
+    hmi_window_show("win_box_tip");  
+
+    data_len = package_user_data_pack(data_buf , CLEAR_ASK , &box_info);//封装数据部分
+    package_send_pack($sys_set.send_pack , $sys_set.station_add ,GETOUT_USER_INFO , data_buf , data_len);//封装整包
+    $sys_set.send_pack_flag = 1;//发送包
+  
+    }else
+    {
+    strcpy($picture_ctrl.win_tip , "卡号错误，请核对后重试");
+    $$HmiCommit;
+    hmi_window_show("win_tip");    
+    }
+
+}
+else//送货员IC
+{
+    SENDER_INFO sender_msg;
+$sys_set.user_ic_enable_flag = 1;//用户IC使能置1，防止多次进入送货员模式
+memset((unsigned char *)&sender_msg , 0xff , sizeof(SENDER_INFO));
+
+sender_msg.flag = SENDER_ASK;//标志，请求权限
+memcpy(sender_msg.send_id , IC_buf , SEND_NUM_LENGTH);//IC卡号复制
+
+package_send_pack($sys_set.send_pack , $sys_set.station_add , SENDER_CONFIRM , (unsigned char *)&sender_msg , sizeof(SENDER_INFO));
+
+$sys_set.send_pack_flag = 1;
+hmi_window_hide("win_sender_psd");
+strcpy($picture_ctrl.win_wait_tip,"后台处理中，请耐心等待");
+$picture_ctrl.win_wait_sw = 0;
+$sys_set.user_ic_enable_flag = 0;
+$$HmiCommit;
+hmi_window_show("win_wait_tip");    
+}
+
+$ARM_info.user_id_flag = 0;
+]]></event>
+  </events>
+ </widget>
+ <widget name="recv_pack_check" class="DigitScriptControl">
+  <properties>
+   <property name="left" type="short" value="185"/>
+   <property name="top" type="short" value="375"/>
+   <property name="right" type="short" value="284"/>
+   <property name="bottom" type="short" value="406"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="triggervar" type="string" length="23" value="sys_set.recv_pack_flag"/>
+   <property name="triggercontrol" type="ulong" value="1"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="script"><![CDATA[unsigned char recv_buf[128];
+PACK_HEAD_INFO *pack_head_msg;
+unsigned char *data_buf;//指向数据部分的指针
+BOX_MSG box_info;
+$sys_set.heart_delay_count = 0;//有数据返回
+
+$sys_set.recv_pack_flag = 0;//接收标志置零，便于下次接收
+$$HmiCommit;
+
+debug_printf("heart_delay_count = 0;recv_pack_flag = 0\n");
+
+memcpy(recv_buf,$sys_set.recv_pack,128);//复制buf
+ex_pack_head_msg.comm_type = 'A';
+
+pack_head_msg = (PACK_HEAD_INFO *)recv_buf;//指针指向包头
+if(0 != memcmp(pack_head_msg->cabinet_num , $sys_set.station_add , CAB_NUM_LEN))
+{
+    return;//站号不对，直接退出
+}
+data_buf = &recv_buf[sizeof(PACK_HEAD_INFO)];//指向数据部分
+switch(pack_head_msg->comm_type)
+{
+    case HEART_BEAT:
+          
+        break;
+    case SENDER_CONFIRM: 
+        //运货员信息确认
+        hmi_window_hide("win_sender_psd");
+        hmi_window_hide("win_wait_tip");//关闭相关窗口
+        if(1 == confirm_sender(data_buf , $box_msg.send_num))
+        {
+            //运货员确认成功，显示下一个窗口，提示输入运单号或刷条码
+            hmi_window_show("win_input_send_tm");
+        }
+        else
+        {
+            //运货员确认失败，显示信息
+            strcpy($picture_ctrl.win_tip,"卡号或密码错误，请核对后输入");
+            $$HmiCommit;
+            hmi_window_show("win_tip");
+        }
+        break;
+    case SAVE_USER_INFO: 
+        //存包时用户信息返回
+        hmi_window_hide("win_wait_tip");//关闭相关窗口
+        if(1 == save_pack_server_back(data_buf , &box_info))
+        {
+            HISTORY_MSG history_info;
+            //信息完全正确，执行存储和开箱操作
+            box_info.status = BOX_USED;//修改箱子状态
+
+            memcpy((char *)&history_info.box_info , (char *)&box_info , sizeof(BOX_MSG));//复制信息到历史记录中
+            history_info.data_time = $system.CurDateTime;//记录时间
+
+            write_box_info(&box_info);
+            write_history_info(&history_info);
+            $ARM_info.station_num = box_info.station_num;
+            $ARM_info.station_port = box_info.station_port;
+            $ARM_info.back_comm = 0;
+            $ARM_info.send_comm = 1;
+            memset($picture_ctrl.open_box_tip,0,30);
+            memcpy($picture_ctrl.open_box_tip , box_info.virtualnumber,VIRTUAL_NUM_LENGTH);
+            strcat($picture_ctrl.open_box_tip ,"号箱门已开");
+            $$HmiCommit;
+            hmi_window_show("win_box_tip");
+            $picture_ctrl.win_save_next_flag = 1;//允许继续存物
+        }else
+        {
+              //数据解析失败或服务器禁止开箱
+            hmi_window_show("win_input_send_tm"); //进入单号输入界面
+            strcpy($picture_ctrl.win_tip,"单号或手机号错误，请核对后输入");
+            $$HmiCommit;
+            hmi_window_show("win_tip");          
+        }
+        break;
+    case GETOUT_USER_INFO: 
+        //取包时服务器确认信息返回
+        if(1 == getout_pack_server_back(data_buf , &box_info))//函数中已经改好了箱子信息，可以直接存储
+        {
+            write_box_info(&box_info);//修改箱子状态后重新写入
+        }
+        break;
+    case RW_CAB_INFO://存取系统信息
+        {
+        CAB_INFO cab_msg;
+        //读取当前系统信息
+        memcpy(cab_msg.cabinet_num , $sys_set.station_add , GPRS_CAB_NUM_LEN);
+        memcpy(cab_msg.admin_psd , $sys_set.admin_psd , GPRS_ADMIN_PSD_LENGTH);
+        cab_msg.box_num = $sys_set.box_num;
+
+        if(RW_OK == rw_cab_server_back(data_buf , &cab_msg))
+        {
+            memcpy($sys_set.station_add , cab_msg.cabinet_num , GPRS_CAB_NUM_LEN);
+            memcpy($sys_set.admin_psd , cab_msg.admin_psd , GPRS_ADMIN_PSD_LENGTH);
+            $sys_set.box_num = cab_msg.box_num; //无论有没有修改系统信息，都可以更新一下
+            if(cab_msg.restart_flag == RESTART)
+            {
+                $sys_set.init_flag = 0;//下次开机时初始化箱子信息
+            }
+            $$HmiCommit;  
+            sys_save_params();//保存好系统信息    
+            if(cab_msg.restart_flag == RESTART)
+            {
+                sys_shutdown(3);//重启系统
+                return;
+            }                 
+        }else
+        {
+            cab_msg.flag = RW_ERR;
+        }
+        package_send_pack($sys_set.send_pack , $sys_set.station_add , RW_CAB_INFO , (unsigned char *)(&cab_msg) , sizeof(CAB_INFO));
+        $sys_set.send_pack_flag = 1;//开始发送
+        }
+        break;
+    case RW_USER_INFO://存取用户信息
+        if(RW_OK == rw_pack_server_back(data_buf , &box_info))
+        {
+           package_user_data_pack(data_buf , RW_OK , &box_info); 
+        }else
+        {
+            package_user_data_pack(data_buf , RW_ERR , &box_info);//封装数据
+        }
+        
+        package_send_pack($sys_set.send_pack , $sys_set.station_add , RW_USER_INFO , data_buf , sizeof(USER_INFO));//数据打包
+        $sys_set.send_pack_flag = 1;//开始发送
+        break;
+
+    case SERVER_OPEN_BOX://远程开箱
+        {
+            SERVER_OPEN_INFO server_open_msg;
+            if(SERVER_OPEN_OK == server_open_box_back(data_buf , &server_open_msg , &box_info))//解析数据，把数据存放在server_open_msg，box_info中
+            {
+                //执行开箱操作
+                $ARM_info.station_num = box_info.station_num;
+                $ARM_info.station_port = box_info.station_port;
+                $ARM_info.back_comm = 0;
+                $ARM_info.send_comm = 1;               
+            }
+            package_send_pack($sys_set.send_pack , $sys_set.station_add , SERVER_OPEN_BOX , (unsigned char *)&server_open_msg , sizeof(SERVER_OPEN_INFO));//数据打包
+            $sys_set.send_pack_flag = 1;//开始发送            
+        }
+
+        break;
+    default: break;
+}
+
+memset($sys_set.recv_pack,0,128);
+]]></event>
+  </events>
+ </widget>
+ <widget name="send_pack_check" class="DigitScriptControl">
+  <properties>
+   <property name="left" type="short" value="35"/>
+   <property name="top" type="short" value="385"/>
+   <property name="right" type="short" value="134"/>
+   <property name="bottom" type="short" value="416"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="triggervar" type="string" length="23" value="sys_set.send_pack_flag"/>
+   <property name="triggercontrol" type="ulong" value="2"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="script"><![CDATA[$sys_set.heart_count = 0;//若有其他包发送，暂不发送心跳包
+]]></event>
+  </events>
+ </widget>
+ <widget name="send_tm_check" class="DigitScriptControl">
+  <properties>
+   <property name="left" type="short" value="35"/>
+   <property name="top" type="short" value="330"/>
+   <property name="right" type="short" value="134"/>
+   <property name="bottom" type="short" value="361"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="triggervar" type="string" length="22" value="ARM_info.send_id_flag"/>
+   <property name="triggercontrol" type="ulong" value="2"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="script"><![CDATA[char send_buf[24];
+if($sys_set.send_tm_enable_flag == 1)
+{
+$sys_set.send_tm_enable_flag = 0;
+send_buf[0] = $ARM_info.send_id0>>8;
+send_buf[1] = $ARM_info.send_id0%256;
+send_buf[2] = $ARM_info.send_id1>>8;
+send_buf[3] = $ARM_info.send_id1%256;
+send_buf[4] = $ARM_info.send_id2>>8;
+send_buf[5] = $ARM_info.send_id2%256;
+send_buf[6] = $ARM_info.send_id3>>8;
+send_buf[7] = $ARM_info.send_id3%256;
+send_buf[8] = $ARM_info.send_id4>>8;
+send_buf[9] = $ARM_info.send_id4%256;
+send_buf[10] = $ARM_info.send_id5>>8;
+send_buf[11] = $ARM_info.send_id5%256;
+send_buf[12] = $ARM_info.send_id6>>8;
+send_buf[13] = $ARM_info.send_id6%256;
+send_buf[14] = $ARM_info.send_id7>>8;
+send_buf[15] = $ARM_info.send_id7%256;
+send_buf[16] = $ARM_info.send_id8>>8;
+send_buf[17] = $ARM_info.send_id8%256;
+send_buf[18] = $ARM_info.send_id9>>8;
+send_buf[19] = $ARM_info.send_id9%256;
+send_buf[20] = $ARM_info.send_id10>>8;
+send_buf[21] = $ARM_info.send_id10%256;
+send_buf[22] = $ARM_info.send_id11>>8;
+send_buf[23] = $ARM_info.send_id11%256;
+memcpy($box_msg.send_id,send_buf,24);
+//memcpy($box_msg.send_id,"23456789011",10);
+hmi_window_hide("win_input_send_tm");//关闭触发窗口
+hmi_window_show("win_input_pnum_type");
+}
+$ARM_info.send_id_flag = 0;
+$system.IsMouseDown = 1;]]></event>
+  </events>
+ </widget>
+ <widget name="get_pack_4" class="button">
+  <properties>
+   <property name="left" type="short" value="645"/>
+   <property name="top" type="short" value="360"/>
+   <property name="right" type="short" value="785"/>
+   <property name="bottom" type="short" value="420"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="测试窗"/>
+   <property name="font_color" type="ulong" value="631052"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="2" value="8"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_test");
+]]></event>
+  </events>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="285"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="330"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="30" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="2" value="8"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="$picture_ctrl.main_tip"/>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="text_2" class="text">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="60"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="105"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="text"/>
+   <property name="align" type="ulong" value="3"/>
+   <property name="fontname" type="string" length="2" value="8"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="text" expression="$picture_ctrl.welcome"/>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="admin_btn" class="button">
+  <properties>
+   <property name="left" type="short" value="574"/>
+   <property name="top" type="short" value="170"/>
+   <property name="right" type="short" value="719"/>
+   <property name="bottom" type="short" value="235"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="管理员"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="2" value="8"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[
+hmi_window_show("win_input_password");
+memset($picture_ctrl.input_psd , 0 , 10);
+strcpy($picture_ctrl.input_password_str,"请输入密码");
+//hmi_window_show("win_admin");
+]]></event>
+  </events>
+ </widget>
+ <widget name="get_pack_2" class="button">
+  <properties>
+   <property name="left" type="short" value="332"/>
+   <property name="top" type="short" value="170"/>
+   <property name="right" type="short" value="477"/>
+   <property name="bottom" type="short" value="235"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="存件"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="2" value="8"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_sender_psd");
+$sys_set.user_ic_enable_flag = 0;//等待用户ＩＣ输入
+]]></event>
+  </events>
+ </widget>
+ <widget name="get_pack_3" class="button">
+  <properties>
+   <property name="left" type="short" value="90"/>
+   <property name="top" type="short" value="170"/>
+   <property name="right" type="short" value="235"/>
+   <property name="bottom" type="short" value="235"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="取件"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="2" value="8"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value="a10.gif"/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_show("win_get_pack");
+]]></event>
+  </events>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="10" value="desk0.jpg"/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="open"><![CDATA[CAB_INFO cab_msg;
+
+if(1 == box_info_init($sys_set.box_num , $sys_set.init_flag))
+{
+    history_info_init();
+    $test_parm.creat_file = 1;
+    $sys_set.init_flag = 1;
+    $$HmiCommit;
+    sys_save_params();   
+}
+else
+{
+    $test_parm.creat_file = 0;
+}
+$system.HideWindowCursor = 1;//隐藏光标
+
+
+        //读取当前系统信息
+memcpy(cab_msg.cabinet_num , $sys_set.station_add , GPRS_CAB_NUM_LEN);
+memcpy(cab_msg.admin_psd , $sys_set.admin_psd , GPRS_ADMIN_PSD_LENGTH);
+cab_msg.box_num = $sys_set.box_num;
+cab_msg.flag = RW_OK;
+cab_msg.restart_flag = SYS_START;
+package_send_pack($sys_set.send_pack , $sys_set.station_add , RW_CAB_INFO , (unsigned char *)(&cab_msg) , sizeof(CAB_INFO));
+$sys_set.send_pack_flag = 1;//开始发送
+
+debug_set_ip("192.168.1.200");
+
+debug_printf("system start\n");
+]]></event>
+  </events>
+ </widget>
+</hmiwidget>

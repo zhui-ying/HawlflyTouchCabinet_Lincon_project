@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="timer_2" class="timer">
+  <properties>
+   <property name="left" type="short" value="320"/>
+   <property name="top" type="short" value="70"/>
+   <property name="right" type="short" value="419"/>
+   <property name="bottom" type="short" value="101"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="interval" type="ulong" value="30000"/>
+   <property name="enableinwindow" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="timer"><![CDATA[if($system.IsMouseDown)
+    $system.IsMouseDown = 0;
+else
+{   //关闭除主界面所有窗口
+    hmi_window_hide("logo");
+    hmi_window_hide("win_get_pack");
+    hmi_window_hide("win_box_tip");
+    hmi_window_hide("win_input_password");
+    hmi_window_hide("win_admin");
+    hmi_window_hide("TextKeyboard6");
+    hmi_window_hide("win_cabinet_set");
+    hmi_window_hide("win_tip");
+    hmi_window_hide("win_box_set");
+    hmi_window_hide("win_box_operate");
+    hmi_window_hide("win_sender_psd");
+    hmi_window_hide("win_wait_tip");
+    hmi_window_hide("win_input_send_tm");
+    hmi_window_hide("win_input_pnum_type");
+    hmi_window_hide("win_save_pack_next_tip");
+    hmi_window_hide("NumKeyboard3");
+    hmi_window_hide("win_sys_set");
+    hmi_window_hide("win_change_admin_psd");
+    hmi_window_hide("win_sys_set_time");
+    hmi_window_hide("win_sys_reset");
+    hmi_window_hide("win_disp_box_status");
+    hmi_window_hide("win_history");
+    hmi_window_hide("win_history_detail");
+    hmi_window_hide("TextKeyboard6");
+    hmi_window_hide("NumKeyboard3");
+    hmi_window_show("win_ad");//显示广告
+}
+]]></event>
+  </events>
+ </widget>
+ <widget name="picture" class="picture">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="220"/>
+   <property name="bottom" type="short" value="50"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="filename" type="string" length="32" value="logo0.jpg"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="transparentcolor" type="ulong" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="timer" class="timer">
+  <properties>
+   <property name="left" type="short" value="150"/>
+   <property name="top" type="short" value="75"/>
+   <property name="right" type="short" value="249"/>
+   <property name="bottom" type="short" value="106"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="interval" type="ulong" value="2000"/>
+   <property name="enableinwindow" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="timer"><![CDATA[$picture_ctrl.logo_ctrl++;
+if($picture_ctrl.logo_ctrl == $picture_ctrl.win_logo_pic_num)
+$picture_ctrl.logo_ctrl = 1;
+
+$sys_set.heart_count++;
+$sys_set.heart_delay_count++;
+if(($sys_set.send_pack_flag == 0) && ($sys_set.heart_count == 5))//20s,到计时时间，发送一个心跳包
+{
+    unsigned char data_buf[2];
+    data_buf[0] = '0';
+    data_buf[1] = $sys_set.hear_send_count++;
+    $sys_set.heart_count = 0;
+    package_send_pack($sys_set.send_pack , $sys_set.station_add ,HEART_BEAT , data_buf , 2);
+    $sys_set.send_pack_flag = 1;//置发送标志位，开始发送
+debug_printf("system OK\n");
+
+}
+
+if($sys_set.heart_delay_count > 11)//超时未返回心跳包，认为通讯中断
+{
+    strcpy($picture_ctrl.win_tip,"通讯中断");
+    $$HmiCommit;
+    hmi_window_show("win_tip");
+    $sys_set.heart_delay_count=0;
+}
+
+]]></event>
+  </events>
+ </widget>
+ <widget name="mulpicture" class="mulpicture">
+  <properties>
+   <property name="left" type="short" value="220"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="50"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="index" type="uchar" value="0"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="filename0" type="string" length="32" value="logo1.jpg"/>
+   <property name="transparent0" type="uchar" value="0"/>
+   <property name="transparentcolor0" type="ulong" value="0"/>
+   <property name="filename1" type="string" length="32" value="logo2.jpg"/>
+   <property name="transparent1" type="uchar" value="0"/>
+   <property name="transparentcolor1" type="ulong" value="0"/>
+   <property name="filename2" type="string" length="32" value=""/>
+   <property name="transparent2" type="uchar" value="0"/>
+   <property name="transparentcolor2" type="ulong" value="0"/>
+   <property name="filename3" type="string" length="32" value=""/>
+   <property name="transparent3" type="uchar" value="0"/>
+   <property name="transparentcolor3" type="ulong" value="0"/>
+   <property name="filename4" type="string" length="32" value=""/>
+   <property name="transparent4" type="uchar" value="0"/>
+   <property name="transparentcolor4" type="ulong" value="0"/>
+   <property name="filename5" type="string" length="32" value=""/>
+   <property name="transparent5" type="uchar" value="0"/>
+   <property name="transparentcolor5" type="ulong" value="0"/>
+   <property name="filename6" type="string" length="32" value=""/>
+   <property name="transparent6" type="uchar" value="0"/>
+   <property name="transparentcolor6" type="ulong" value="0"/>
+   <property name="filename7" type="string" length="32" value=""/>
+   <property name="transparent7" type="uchar" value="0"/>
+   <property name="transparentcolor7" type="ulong" value="0"/>
+  </properties>
+  <dynamics>
+   <dynamic propname="index" expression="$picture_ctrl.logo_ctrl-1"/>
+  </dynamics>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="50"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="1" value=""/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+</hmiwidget>

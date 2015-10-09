@@ -1,0 +1,36 @@
+2014-1-15 19:45:52 : no such rtdb data:sys_set.!
+2014-1-15 19:45:56 : no such rtdb data:sys_set.!
+2014-1-16 10:40:9 : rtdb xml config:empty datagroup
+2014-1-16 10:40:9 : rtdb xml config:empty datagroup
+2014-1-16 10:40:9 : rtdb xml config:empty datagroup
+2014-1-16 10:41:25 : rtdb xml config:empty datagroup
+2014-1-16 10:41:25 : rtdb xml config:empty datagroup
+2014-1-16 10:41:25 : rtdb xml config:empty datagroup
+2014-1-16 10:50:3 : rtdb xml config:empty datagroup
+2014-1-16 10:50:3 : rtdb xml config:empty datagroup
+2014-1-16 10:50:3 : rtdb xml config:empty datagroup
+2014-1-16 10:50:20 : rtdb xml config:empty datagroup
+2014-1-16 10:50:20 : rtdb xml config:empty datagroup
+2014-1-16 10:50:20 : rtdb xml config:empty datagroup
+2014-1-16 16:54:26 : parse widget error,window:win_box_table,widget name=tabledataview
+2014-1-16 17:0:24 : parse widget error,window:win_box_table,widget name=tabledataview
+2014-1-18 20:43:20 : no such rtdb data:box_msg.boxNum!
+2014-1-18 20:43:20 : no such rtdb data:box_msg.box!
+2014-1-18 20:43:20 : no such rtdb data:box_msg.boxPort!
+2014-1-18 20:43:20 : no such rtdb data:box_msg.boxPort!
+2014-1-18 21:39:10 : no such rtdb data:.!
+2014-2-1 20:58:28 : parse widget error,window:win_cabinet_set,widget name=textinput
+2014-2-1 21:0:27 : parse widget error,window:win_cabinet_set,widget name=textinput
+2014-2-1 21:54:45 : parse widget error,window:win_box_set,widget name=textinput_2
+2014-2-1 21:56:55 : parse widget error,window:win_box_set,widget name=textinput_2
+2014-2-1 22:1:50 : parse widget error,window:win_box_set,widget name=textinput_2
+2014-2-1 22:3:56 : parse widget error,window:win_box_set,widget name=textinput_2
+2014-2-1 22:10:16 : parse widget error,window:win_box_set,widget name=numinput
+2014-2-1 22:11:38 : parse widget error,window:win_box_set,widget name=numinput
+2014-2-1 22:13:50 : parse widget error,window:win_box_set,widget name=numinput
+2014-2-8 20:5:37 : tcplink: bind failed!
+2014-2-14 13:26:47 : Parse configuration file:D:\SProgram Files\LinCon\project\hkfl_3\hkfl/TextKeyboard3.xml failed
+2014-2-18 11:7:57 : no such rtdb data:picture_ctrl.history_count!
+2014-2-18 11:53:7 : no such rtdb data:picture_ctrl.history_count!
+2014-2-18 11:57:0 : no such rtdb data:picture_ctrl.history_count!
+2014-2-18 11:59:3 : no such rtdb data:picture_ctrl.history_count!

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmiwidget>
+ <widget name="button" class="button">
+  <properties>
+   <property name="left" type="short" value="440"/>
+   <property name="top" type="short" value="70"/>
+   <property name="right" type="short" value="585"/>
+   <property name="bottom" type="short" value="115"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="刷新"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+if(1 == read_box_info_station_num($box_msg.station_num , &box_info))
+{
+    memcpy($box_msg.virtualnumber ,box_info.virtualnumber , VIRTUAL_NUM_LENGTH);//虚拟箱号
+    $box_msg.station_port = box_info.station_port;//端口号
+    $box_msg.type = box_info.type;//箱格类型
+    $picture_ctrl.type_temp = box_info.type - '1';
+}
+else
+{
+    
+    strcpy($picture_ctrl.win_tip,"箱格序列号错误");
+    $$HmiCommit;
+    hmi_window_show("win_tip");
+}
+]]></event>
+  </events>
+ </widget>
+ <widget name="numinput_2" class="numinput">
+  <properties>
+   <property name="left" type="short" value="285"/>
+   <property name="top" type="short" value="70"/>
+   <property name="right" type="short" value="400"/>
+   <property name="bottom" type="short" value="101"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="box_msg.station_num"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="100"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="numinput" class="numinput">
+  <properties>
+   <property name="left" type="short" value="275"/>
+   <property name="top" type="short" value="190"/>
+   <property name="right" type="short" value="390"/>
+   <property name="bottom" type="short" value="221"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="32" value="box_msg.station_port"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="intwidth" type="ulong" value="0"/>
+   <property name="precision" type="ulong" value="2"/>
+   <property name="minvalue" type="float" value="0"/>
+   <property name="maxvalue" type="float" value="100"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="inttype" type="ulong" value="0"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+   <property name="array_offset" type="ulong" value="0"/>
+   <property name="array_type" type="uchar" value="2"/>
+   <property name="endian_type" type="uchar" value="0"/>
+   <property name="enablelinear" type="uchar" value="0"/>
+   <property name="inputminvalue" type="double" value="0"/>
+   <property name="inputmaxvalue" type="double" value="100"/>
+   <property name="outputminvalue" type="double" value="0"/>
+   <property name="outputmaxvalue" type="double" value="100"/>
+   <property name="enablepolynomial" type="uchar" value="0"/>
+   <property name="K1" type="double" value="0"/>
+   <property name="K2" type="double" value="1"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="button_7" class="button">
+  <properties>
+   <property name="left" type="short" value="620"/>
+   <property name="top" type="short" value="355"/>
+   <property name="right" type="short" value="765"/>
+   <property name="bottom" type="short" value="400"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="返回"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[hmi_window_hide("win_box_set");]]></event>
+  </events>
+ </widget>
+ <widget name="button_6" class="button">
+  <properties>
+   <property name="left" type="short" value="270"/>
+   <property name="top" type="short" value="340"/>
+   <property name="right" type="short" value="415"/>
+   <property name="bottom" type="short" value="385"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="caption" type="string" length="32" value="确认"/>
+   <property name="font_color" type="ulong" value="0"/>
+   <property name="down_text" type="string" length="32" value=""/>
+   <property name="down_text_color" type="ulong" value="0"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="frame" type="uchar" value="1"/>
+   <property name="edge_color" type="ulong" value="0"/>
+   <property name="back_color" type="ulong" value="12632256"/>
+   <property name="up_shadow_color" type="ulong" value="16777215"/>
+   <property name="down_shadow_color" type="ulong" value="8421504"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="down_pic_filename" type="string" length="32" value=""/>
+   <property name="up_pic_filename" type="string" length="32" value="b8.gif"/>
+   <property name="type" type="ulong" value="0"/>
+   <property name="var_name" type="string" length="1" value=""/>
+   <property name="pic_name" type="string" length="1" value=""/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="pattern" type="ulong" value="0"/>
+   <property name="continuous_exec" type="uchar" value="0"/>
+   <property name="continuous_exec_interval" type="ulong" value="500"/>
+  </properties>
+  <dynamics/>
+  <events>
+   <event name="click"><![CDATA[BOX_MSG box_info;
+if(1 == read_box_info_station_num($box_msg.station_num , &box_info))
+{
+    memcpy(box_info.virtualnumber , $box_msg.virtualnumber , VIRTUAL_NUM_LENGTH);//虚拟箱号
+    box_info.station_port = $box_msg.station_port;//端口号
+    box_info.type = $picture_ctrl.type_temp + '1';
+    $box_msg.type = box_info.type;//箱格类型
+    write_box_info(&box_info);//写入箱格信息
+    strcpy($picture_ctrl.win_tip,"箱格设置成功");
+}
+else
+{
+    
+    strcpy($picture_ctrl.win_tip,"箱格序列号错误");
+}
+    $$HmiCommit;
+    hmi_window_show("win_tip");
+
+]]></event>
+  </events>
+ </widget>
+ <widget name="combobox" class="combobox">
+  <properties>
+   <property name="left" type="short" value="290"/>
+   <property name="top" type="short" value="255"/>
+   <property name="right" type="short" value="395"/>
+   <property name="bottom" type="short" value="395"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="list" type="string" length="12" value="小;中;大"/>
+   <property name="dynalist" type="string" length="32" value=""/>
+   <property name="variable" type="string" length="32" value="picture_ctrl.type_temp"/>
+   <property name="itemheight" type="ulong" value="0"/>
+   <property name="btnwidth" type="ulong" value="0"/>
+   <property name="btnheight" type="ulong" value="4"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_4" class="text">
+  <properties>
+   <property name="left" type="short" value="145"/>
+   <property name="top" type="short" value="260"/>
+   <property name="right" type="short" value="265"/>
+   <property name="bottom" type="short" value="291"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱格类型"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_3" class="text">
+  <properties>
+   <property name="left" type="short" value="110"/>
+   <property name="top" type="short" value="185"/>
+   <property name="right" type="short" value="265"/>
+   <property name="bottom" type="short" value="216"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱格端口号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="textinput" class="textinput">
+  <properties>
+   <property name="left" type="short" value="280"/>
+   <property name="top" type="short" value="130"/>
+   <property name="right" type="short" value="410"/>
+   <property name="bottom" type="short" value="161"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="varname" type="string" length="22" value="box_msg.virtualnumber"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="prompt" type="string" length="32" value="请输入"/>
+   <property name="password" type="uchar" value="0"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="edgecolor" type="ulong" value="0"/>
+   <property name="backcolor" type="ulong" value="16755370"/>
+   <property name="up_shadow_color" type="ulong" value="8421504"/>
+   <property name="down_shadow_color" type="ulong" value="16777215"/>
+   <property name="shadow_width" type="ulong" value="1"/>
+   <property name="popup_keyboard_mode" type="uchar" value="0"/>
+   <property name="popup_keyboard_left" type="ulong" value="0"/>
+   <property name="popup_keyboard_top" type="ulong" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text_2" class="text">
+  <properties>
+   <property name="left" type="short" value="145"/>
+   <property name="top" type="short" value="130"/>
+   <property name="right" type="short" value="265"/>
+   <property name="bottom" type="short" value="161"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱格箱号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="text" class="text">
+  <properties>
+   <property name="left" type="short" value="135"/>
+   <property name="top" type="short" value="70"/>
+   <property name="right" type="short" value="265"/>
+   <property name="bottom" type="short" value="101"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="color" type="ulong" value="0"/>
+   <property name="text" type="string" length="32" value="箱格序号"/>
+   <property name="align" type="ulong" value="1"/>
+   <property name="fontname" type="string" length="3" value="16"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="picture" class="picture">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="0"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="430"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="filename" type="string" length="32" value="desk0.jpg"/>
+   <property name="load" type="uchar" value="1"/>
+   <property name="transparent" type="uchar" value="0"/>
+   <property name="transparentcolor" type="ulong" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+ <widget name="window" class="window">
+  <properties>
+   <property name="left" type="short" value="0"/>
+   <property name="top" type="short" value="50"/>
+   <property name="right" type="short" value="800"/>
+   <property name="bottom" type="short" value="480"/>
+   <property name="visible" type="uchar" value="1"/>
+   <property name="enable" type="uchar" value="1"/>
+   <property name="noredraw" type="uchar" value="0"/>
+   <property name="flash" type="uchar" value="0"/>
+   <property name="flashspeed" type="ulong" value="1"/>
+   <property name="xoffset" type="short" value="0"/>
+   <property name="yoffset" type="short" value="0"/>
+   <property name="style" type="ulong" value="0"/>
+   <property name="bkcolor" type="ulong" value="16777215"/>
+   <property name="security_level" type="ushort" value="0"/>
+   <property name="security_mode" type="uchar" value="0"/>
+   <property name="statusvar" type="string" length="1" value=""/>
+   <property name="backpicname" type="string" length="1" value=""/>
+   <property name="noclip" type="uchar" value="0"/>
+  </properties>
+  <dynamics/>
+  <events/>
+ </widget>
+</hmiwidget>

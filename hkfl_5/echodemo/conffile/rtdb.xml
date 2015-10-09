@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="GB2312"?>
+<rtdbs>
+<rtdb name="system" sync="0" >
+	<data name="Logic_True" type="bit" length="1" init="1" description="" />
+	<data name="Logic_False" type="bit" length="1" init="0" description="" />
+	<data name="Logic_And" type="uchar" length="1" init="1" description="" />
+	<data name="Logic_Or" type="uchar" length="1" init="2" description="" />
+	<data name="Logic_Xor" type="uchar" length="1" init="3" description="" />
+	<data name="Logic_Not" type="uchar" length="1" init="4" description="" />
+	<data name="Arithm_Add" type="uchar" length="1" init="1" description="" />
+	<data name="Arithm_Sub" type="uchar" length="1" init="2" description="" />
+	<data name="Arithm_Mul" type="uchar" length="1" init="3" description="" />
+	<data name="Arithm_Div" type="uchar" length="1" init="4" description="" />
+	<data name="Compare_More" type="uchar" length="1" init="0" description="" />
+	<data name="Compare_More_E" type="uchar" length="1" init="1" description="" />
+	<data name="Compare_Less" type="uchar" length="1" init="2" description="" />
+	<data name="Compare_Less_E" type="uchar" length="1" init="3" description="" />
+	<data name="Compare_Equal" type="uchar" length="1" init="4" description="" />
+	<data name="Compare_Not_Equal" type="uchar" length="1" init="5" description="" />
+	<data name="Double_Const_0" type="double" length="8" init="0" description="" />
+	<data name="HmiLoopCount" type="ulong" length="4" init="0" description="屏幕刷新次数计数值" />
+	<data name="HideMainWindow" type="bit" length="1" init="1" description="＝1时隐藏主窗口" />
+	<data name="CurDateTime" type="ulong" length="4" init="0" description="表示1970/1/1以来的秒数" />
+	<data name="IoCycleTime" type="ulong" length="4" init="500" description="" />
+	<data name="FbdCycleTime" type="ulong" length="4" init="100" description="功能块计算循环时间(毫秒)" />
+	<data name="PlcCycleTime" type="ulong" length="4" init="100" description="梯形图计算循环时间(毫秒)" />
+	<data name="FbdEnable" type="bit" length="1" init="1" description="为1允许功能块运行" />
+	<data name="PlcEnable" type="bit" length="1" init="1" description="为1允许梯形图运行" />
+	<data name="IoEnable" type="bit" length="1" init="1" description="为1允许IO设备读写数据" />
+	<data name="IoHeartbeat" type="bit" length="1" init="0" description="IO设备读写心跳" />
+	<data name="FbdHeartbeat" type="bit" length="1" init="0" description="功能块计算心跳" />
+	<data name="PlcHeartbeat" type="bit" length="1" init="0" description="梯形图计算心跳" />
+	<data name="HmiHeartbeat" type="bit" length="1" init="0" description="人机界面运行心跳" />
+	<data name="RedundancyType" type="string" length="16" init="0" description="冗余类型(master:主机、slave:从机、client:客户机)" />
+	<data name="HmidbDefCycleTime" type="ulong" length="4" init="500" description="人机界面默认刷新周期(毫秒)" />
+	<data name="Year" type="ushort" length="2" init="0" description="当前日期(年)" />
+	<data name="Month" type="uchar" length="1" init="0" description="当前日期(月)" />
+	<data name="Day" type="uchar" length="1" init="0" description="当前日期(日)" />
+	<data name="Hour" type="uchar" length="1" init="0" description="当前日期(小时)" />
+	<data name="Minute" type="uchar" length="1" init="0" description="当前日期(分)" />
+	<data name="Second" type="uchar" length="1" init="0" description="当前日期(秒)" />
+	<data name="ScreenWidth" type="ushort" length="2" init="640" description="人机界面屏幕像素宽度" />
+	<data name="ScreenHeight" type="ushort" length="2" init="480" description="人机界面屏幕像素高度" />
+	<data name="rtdb_server_port" type="ushort" length="2" init="8200" description="人机界面服务端口号(用于在线模拟)" />
+	<data name="rtdb_server_timeout" type="ulong" length="4" init="500" description="人机界面通信超时值(毫秒，用于在线模拟)" />
+	<data name="AutoReleaseVideoMem" type="bit" length="1" init="1" description="为1时自动释放显示内存，可用于节省内存空间" />
+</rtdb>
+<rtdb name="redundancy" sync="1" >
+	<data name="MasterRun" type="bit" length="1" init="0" description="主机运行时为1" />
+	<data name="SlaveRun" type="bit" length="1" init="0" description="从机运行时为1" />
+</rtdb>
+<rtdb name="hmi_system_set" sync="0" >
+	<datagroup name="network_set">
+		<data name="autogetip" type="bit" length="1" init="0" description="" />
+		<data name="ipaddr1" type="uchar" length="1" init="192" description="网卡1的IP地址" />
+		<data name="ipaddr2" type="uchar" length="1" init="168" description="网卡1的IP地址" />
+		<data name="ipaddr3" type="uchar" length="1" init="0" description="网卡1的IP地址" />
+		<data name="ipaddr4" type="uchar" length="1" init="10" description="网卡1的IP地址" />
+		<data name="netmask1" type="uchar" length="1" init="255" description="网卡1的子网掩码" />
+		<data name="netmask2" type="uchar" length="1" init="255" description="网卡1的子网掩码" />
+		<data name="netmask3" type="uchar" length="1" init="255" description="网卡1的子网掩码" />
+		<data name="netmask4" type="uchar" length="1" init="0" description="网卡1的子网掩码" />
+		<data name="route1" type="uchar" length="1" init="192" description="网卡1的默认路由" />
+		<data name="route2" type="uchar" length="1" init="168" description="网卡1的默认路由" />
+		<data name="route3" type="uchar" length="1" init="0" description="网卡1的默认路由" />
+		<data name="route4" type="uchar" length="1" init="1" description="网卡1的默认路由" />
+		<data name="eth1_autogetip" type="bit" length="1" init="0" description="" />
+		<data name="eth1_ipaddr1" type="uchar" length="1" init="192" description="网卡2的IP地址" />
+		<data name="eth1_ipaddr2" type="uchar" length="1" init="168" description="网卡2的IP地址" />
+		<data name="eth1_ipaddr3" type="uchar" length="1" init="0" description="网卡2的IP地址" />
+		<data name="eth1_ipaddr4" type="uchar" length="1" init="10" description="网卡2的IP地址" />
+		<data name="eth1_netmask1" type="uchar" length="1" init="255" description="网卡2的子网掩码" />
+		<data name="eth1_netmask2" type="uchar" length="1" init="255" description="网卡2的子网掩码" />
+		<data name="eth1_netmask3" type="uchar" length="1" init="255" description="网卡2的子网掩码" />
+		<data name="eth1_netmask4" type="uchar" length="1" init="0" description="网卡2的子网掩码" />
+		<data name="eth1_route1" type="uchar" length="1" init="192" description="网卡2的默认路由" />
+		<data name="eth1_route2" type="uchar" length="1" init="168" description="网卡2的默认路由" />
+		<data name="eth1_route3" type="uchar" length="1" init="0" description="网卡2的默认路由" />
+		<data name="eth1_route4" type="uchar" length="1" init="1" description="网卡2的默认路由" />
+	</datagroup>
+	<datagroup name="lcd_set">
+		<data name="brightness" type="uchar" length="1" init="100" description="液晶显示背光值(0-100)" />
+		<data name="blankdelaysec" type="ulong" length="4" init="0" description="屏保延迟秒数(=0取消屏保)" />
+		<data name="brightness_mem" type="uchar" length="" init="100" description="" />
+		<data name="blankdelaysec_mem" type="ulong" length="4" init="0" description="" />
+	</datagroup>
+	<datagroup name="serial_set">
+		<data name="com2_is_rs232" type="bit" length="1" init="0" description="为1时串口2为RS232,为0时为RS485" />
+		<data name="com3_is_rs232" type="bit" length="1" init="0" description="为1时串口3为RS232,为0时为RS485" />
+		<data name="com2_is_rs232_mem" type="bit" length="1" init="0" description="" />
+		<data name="com3_is_rs232_mem" type="bit" length="1" init="0" description="" />
+	</datagroup>
+	<datagroup name="show_wnd_set">
+		<data name="show_sys_wnd1" type="bit" length="1" init="0" description="显示系统窗口控制变量1" />
+		<data name="show_sys_wnd2" type="bit" length="1" init="0" description="显示系统窗口控制变量2" />
+		<data name="show_sys_wnd3" type="bit" length="1" init="0" description="显示系统窗口控制变量3" />
+		<data name="show_sys_wnd_timer" type="ulong" length="4" init="0" description="控制变量延迟时间,在延迟时间内控制变量均为1自动显示系统设置窗口" />
+	</datagroup>
+	<datagroup name="time_set">
+		<data name="Year_set" type="ushort" length="2" init="0" description="" />
+		<data name="Month_set" type="uchar" length="1" init="0" description="" />
+		<data name="Day_set" type="uchar" length="1" init="0" description="" />
+		<data name="Hour_set" type="uchar" length="1" init="0" description="" />
+		<data name="Minute_set" type="uchar" length="1" init="0" description="" />
+		<data name="Second_set" type="uchar" length="1" init="0" description="" />
+	</datagroup>
+	<datagroup name="bell_set">
+		<data name="bell_on_click" type="bit" length="1" init="0" description="为1时点击触摸屏自动响铃" />
+		<data name="bell_loop_count" type="ulong" length="4" init="1" description="响铃次数" />
+		<data name="bell_freq" type="ulong" length="4" init="10" description="响铃长度" />
+	</datagroup>
+	<datagroup name="link_set">
+		<data name="link_timeout_wnd_on" type="bit" length="1" init="1" description="为1时当通信超时自动显示提示窗口" />
+		<data name="link_timeout_text" type="string" length="64" init="0" description="" />
+		<data name="link_timeout_wnd_x" type="short" length="2" init="-1" description="超时窗口的起始x位置,-1表示居中" />
+		<data name="link_timeout_wnd_y" type="short" length="2" init="-1" description="超时窗口的起始y位置,-1表示居中" />
+	</datagroup>
+	<datagroup name="security_set">
+		<data name="cur_security_level" type="ushort" length="2" init="0" description="当前系统的安全级别" />
+		<data name="security_level1_pass" type="string" length="20" init="" description="安全级别1的密码" />
+		<data name="security_level2_pass" type="string" length="20" init="" description="安全级别2的密码" />
+		<data name="security_level3_pass" type="string" length="20" init="" description="安全级别3的密码" />
+		<data name="security_level4_pass" type="string" length="20" init="" description="安全级别4的密码" />
+		<data name="security_level5_pass" type="string" length="20" init="" description="安全级别5的密码" />
+		<data name="security_level6_pass" type="string" length="20" init="" description="安全级别6的密码" />
+		<data name="security_level7_pass" type="string" length="20" init="" description="安全级别7的密码" />
+		<data name="security_level8_pass" type="string" length="20" init="" description="安全级别8的密码" />
+		<data name="security_level9_pass" type="string" length="20" init="" description="安全级别9的密码" />
+		<data name="security_level10_pass" type="string" length="20" init="" description="安全级别10的密码" />
+		<data name="user_input_pass" type="string" length="20" init="" description="" />
+	</datagroup>
+	<datagroup name="disk_space_set">
+		<data name="flash_free_disk_space" type="long" length="4" init="-1" description="内部Flash自由空间大小(以Kbyte为单位)" />
+		<data name="cf_free_disk_space" type="long" length="4" init="-1" description="CF卡自由空间大小(以Kbyte为单位)" />
+		<data name="low_space_wnd_on" type="bit" length="1" init="1" description="为1时当磁盘空间不足时自动显示提示窗口" />
+		<data name="low_space_text" type="string" length="64" init="0" description="磁盘空间不足时的提示信息" />
+	</datagroup>
+</rtdb>
+<rtdb name="printer" sync="0" >
+	<data name="printer_name" type="string" length="32" init="escp2-me1" description="打印机型号" />
+	<data name="resolution" type="string" length="20" init="360sw" description="打印机分辨率(DPI)" />
+	<data name="paper" type="string" length="20" init="A4" description="纸张类型" />
+	<data name="left_margin" type="float" length="4" init="1" description="打印左边界(厘米)" />
+	<data name="top_margin" type="float" length="4" init="1" description="打印上边界(厘米)" />
+	<data name="status" type="long" length="4" init="0" description="打印机状态" />
+	<data name="scaling" type="float" length="4" init="1.0" description="打印放大倍数" />
+</rtdb>
+</rtdbs>
